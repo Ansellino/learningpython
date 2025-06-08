@@ -138,3 +138,48 @@ Pasti Anda familiar dengan Microsoft Excel, bukan? Sebuah aplikasi spreadsheet b
 
 # Konteks Data
 
+Data bisa dikatakan sebagai cerminan dari kehidupan nyata. Anda tahu kan bagaimana kehidupan di dunia nyata itu rumit? Begitu pula data.
+
+Data yang banyak akan terlihat rumit dan sulit dipahami. Namun, apabila Anda menemukan konteks (makna inti) dari data tersebut, setidaknya Anda dapat menemukan sebuah cara yang tepat untuk memahaminya. Maka dari itu, apabila kita memiliki data tanpa memahami konteks, bisa saja data tersebut tidak bisa tersampaikan dengan baik.
+
+Penting untuk mengetahui audiens (siapa yang nanti membaca data atau visualisasi) untuk menentukan bagaimana cara menyampaikan data. Selanjutnya, Anda juga harus bertanya pada diri sendiri, “Apakah mereka perlu tahu dan apakah Anda ingin mereka jadi tahu?” Hal ini harus bisa Anda jawab terlebih dahulu sebelum menyampaikan data kepada audiens. Apabila pertanyaan tersebut belum terjawab, maka bisa saja Anda malah menyampaikan hal-hal yang menurut mereka tidak perlu dan menjadi kurang relevan.
+
+Misal, Anda tahu audiens yang hadir adalah seorang Data Analyst (seseorang yang pekerjaannya menganalisis data) dan memiliki pengalaman di bidang pengolahan data. Maka tidak mungkin Anda menyampaikan informasi kepada mereka sama halnya seperti dengan pengusaha non-IT. Dengan demikian, Anda sangat perlu menentukan gaya bahasa dalam menyampaikan informasi.
+
+Pertanyaan penting yang juga harus ditanyakan ke diri sendiri adalah, “Bagaimana saya bisa menentukan poin penting dan membuat data tersampaikan secara efektif?” Bayangkan data Anda berupa kanvas dan Anda adalah seorang pelukis. Apa pun yang akan Anda lukis pada kanvas, itu yang akan dilihat oleh orang lain. Lantas, sebagai seorang pelukis, ada beberapa hal yang perlu dipikirkan, antara lain:
+
+Untuk siapa lukisan ini dibuat?
+Apa yang ingin dilukis?
+Bagaimana cara melukiskannya?
+Poin-poin pertanyaan di atas apabila dilakukan oleh seorang Data Analyst menjadi seperti berikut:
+
+Kepada siapa data ini akan disampaikan?
+Data apa yang ingin disampaikan?
+Bagaimana cara menyampaikan data tersebut?
+
+## Kepada siapa data ini akan disampaikan?
+
+Sebelum menyampaikan sebuah data, kita harus mengetahui dulu siapa audiens yang akan kita hadapi. Hal ini penting untuk membuat proses penyampaian data lebih efektif dan bisa diterima oleh audiens. Anda harus bisa membedakan penyampaian data antara audiens umum dan yang sudah profesional (sudah ahli di bidangnya).
+
+Apabila mayoritas berupa audiens umum, bukan berarti kita bisa menganggap semuanya masih pemula. Bisa saja di antara mereka ada salah satu audiens profesional, makanya kita harus mengambil titik tengah dalam hal penyampaian data, yaitu dengan penyampaian yang mudah dipahami, tetapi tidak mengurangi detail dari data.
+
+Lain ceritanya jika kita membawakan data dengan audiens yang rata-rata sudah profesional. Maka harus benar-benar diperhatikan setiap detail dari data yang kita bawakan karena pasti audiens lebih kritis dalam memahami apa yang disampaikan.
+
+## Data apa yang ingin saya sampaikan?
+
+Supaya data relevan dengan audiens, Anda harus menyaring terlebih dahulu data yang dimiliki. Hal ini untuk membuat audiens dapat menentukan langkah seperti apa yang harus dilakukan audiens setelah mengetahui data yang disampaikan.
+
+Misalnya, Anda diminta untuk mempresentasikan data tentang perkembangan penjualan perusahaan dalam setahun terakhir pada sebuah rapat dan audiensnya adalah tim penjualan khusus untuk produk televisi. Nah, Anda dapat mengumpulkan data yang khusus berhubungan dengan penjualan televisi, total produksi barang televisi, dan lain sebagainya. Dengan begitu, audiens yang ada dalam rapat tersebut dapat cepat mengambil keputusan apakah mereka perlu menambah atau mengurangi produksi barang.
+
+## Bagaimana cara menyampaikan data tersebut?
+
+Metode penyampaian juga perlu diperhatikan. Misal, terdapat kondisi di mana sebagian besar audiens tidak terbiasa dengan data dalam bentuk angka. Maka, kita dapat menggunakan metode seolah sedang bercerita dengan berdasar pada data yang kita sampaikan sehingga cara kita membawakan data tidak seperti membaca. Tugas kita sebagai presenter yang membawakan data tersebut adalah memperjelas setiap bagian dengan bumbu cerita pada beberapa elemen data yang ada.
+
+Seabgai contoh, penjualan novel dengan judul A pada bulan Juni 2019 meningkat sebanyak 25% dibanding bulan sebelumnya. Nah, di sini Anda jangan terlalu datar dengan menyampaikan jumlah peningkatannya saja. Namun, Anda dapat bercerita tentang apa yang melatarbelakangi peningkatan tersebut. Misal kita membawakan dengan narasi sebagai berikut:
+
+“Film A yang ditayangkan bulan Februari 2019 lalu mengundang antusias yang tinggi bagi penonton film tanah air. Bahkan, beberapa sumber mengatakan jutaan tiket bioskop ludes terjual dalam waktu sehari saja dari total keseluruhan penonton di Indonesia. Hal tersebut dikarenakan film A merupakan adaptasi dari novel yang sangat terkenal sehingga pada bulan Februari penjualan total tiket meningkat sebanyak 25% dibanding bulan sebelumnya.”
+
+Narasi di atas akan lebih dapat dimengerti oleh audiens tersebut daripada hanya membaca angka seperti berikut:
+“Penjualan total tiket bulan Januari: 900 ribu.
+Penjualan total tiket bulan Februari: 1.125 juta.”
+
