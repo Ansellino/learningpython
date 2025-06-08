@@ -124,3 +124,325 @@ Selanjutnya, kita ingin mengurutkan data berdasarkan lebih dari satu kondisi, mi
    ![alt text](image-37.png)
 
 Dari gambar di atas dapat dilihat bahwa metode pengurutan pertama adalah berdasarkan nama, kemudian produk. Misalnya, Agung pernah membeli produk charger, kabel USB, dan keyboard; sedangkan Ahmad pernah membeli produk baterai, keyboard, dan monitor. Karena abjad nama Agung (AG) lebih dulu dari Ahmad (AH), maka Agung berada di urutan pertama. Google Sheets kemudian mengurutkan produk yang dibeli Agung menurut abjad mulai dari charger hingga keyboard. Setelah mengurutkan item yang dibeli Agung, barulah menuju ke data Ahmad dengan urutan produk yang dibeli mulai dari baterai hingga monitor.
+
+# Penyaringan Data
+
+Pada Google Sheets, tersedia fitur yang memungkinkan kita untuk melakukan penyaringan data. Apa itu penyaringan data?
+
+Penyaringan data adalah cara agar hanya menampilkan data tertentu berdasarkan kondisi yang kita tentukan. Pada saat proses penyaringan, data yang tidak memenuhi kriteria kondisi akan secara otomatis disembunyikan. Namun, data yang disembunyikan tersebut tidak terhapus dari Google Sheets.
+
+Fitur ini disebut fitur filter dan proses penyaringan data pada Google Sheets disebut dengan istilah memfilter. Fitur ini dapat Anda akses melalui menu Data - Create a filter.
+
+Untuk memperdalam pemahaman tentang penyaringan data, mari kita mulai penerapannya pada contoh data penjualan sebelumnya.
+
+1. Pertama, tentukan data apa yang ingin Anda ketahui. Misalnya, kita ingin melihat dan menampilkan data pembeli produk keyboard.
+
+2. Sorot semua data, kemudian pilih menu Data - Create a filter.
+
+   ![alt text](image-38.png)
+
+3. Setelah itu, Anda akan melihat ikon kecil berbentuk seperti segitiga terbalik di sebelah kanan judul kategori data.
+
+![alt text](image-39.png)
+
+4. Dalam kasus ini, klik ikon yang terletak di samping judul kategori Produk. Berbagai opsi kondisi penyaringan akan muncul. Karena kita hanya ingin menampilkan pembelian produk keyboard, maka pastikan hanya “Keyboard” saja yang tercentang. Setelah itu, klik OK.
+
+![alt text](image-40.png)
+
+5. Berikut inilah hasilnya.
+
+![alt text](image-41.png)
+
+Seperti yang Anda lihat, hanya terlihat baris yang pada kolom Produk (kolom D) berisi data “Keyboard”.
+
+# Pengenalan Formula pada Spreadsheet
+
+Sebelum memulai pembahasan mengenai formula, ada baiknya kita menyegarkan ingatan tentang materi yang sudah dipelajari sebelumnya. Pada materi sebelumnya, kita telah belajar tentang navigasi hingga penyaringan data (filter).
+
+Namun, bagaimana jika kita ingin menganalisis data? Pasti dalam prosesnya tidak lepas dari perhitungan matematis dalam spreadsheet tersebut. Nah, di sinilah pentingnya formula yang dapat membantu kita dalam perhitungan mulai dari yang sederhana, seperti penjumlahan dan rata-rata, hingga yang kompleks.
+
+Formula merupakan sebuah langkah atau rumus untuk melakukan perhitungan matematis sehingga mendapatkan nilai tertentu. Istilah formula sendiri sudah sangat umum ditemui dalam aplikasi spreadsheet seperti Microsoft Excel, LibreOffice Calc, dan Google Sheets.
+
+## Referensi Sel
+
+Sebuah formula pasti merujuk pada suatu alamat sel tertentu. Nah, rujukan alamat bisa disebut dengan referensi sel. Contoh sederhananya apabila kita ingin mengetahui jumlah nilai dari dua alamat sel, maka kita bisa menggunakan rumus penjumlahan sederhana seperti berikut.
+
+![alt text](image-42.png)
+
+Bagian A, B, C, dan seterusnya yang terbentang secara horizontal disebut kolom, sedangkan 1, 2, dan 3 yang membentang vertikal disebut baris. Gambar di atas juga menjelaskan bahwa terdapat data pada sel A1 bernilai 4 dan sel A2 bernilai 3. Kemudian, kita ingin mengetahui hasil penjumlahannya pada sel A3. Mulailah dengan tanda “=” diikuti dengan alamat sel A1 + A2. Pada akhirnya, formula tersebut menghasilkan nilai baru yaitu 7 pada sel A3.
+
+![alt text](image-43.png)
+
+Apabila nilai dari salah satu sel referensi sel A1 atau A2 diubah, maka secara otomatis hasil penjumlahan di sel A3 juga berubah. Jika kita mengubah referensi sel, maka nilai yang tampil sebagai output di sel lain yang berisi rumus juga berubah.
+
+Contoh pada gambar di bawah, data pada sel A2 kita ubah dari angka 3 menjadi 4. Alhasil, pada kolom A3 akan otomatis berubah dari 7 menjadi 8.
+
+![alt text](image-44.png)
+
+Berhati-hatilah dalam mengganti referensi sel yang berkaitan dengan rumus atau formula tertentu. Ini berlaku untuk semua penggunaan rumus yang ada di spreadsheet ya.
+
+Dengan menggabungkan operator matematika dengan referensi sel, Anda dapat menerapkannya di rumus lainnya dalam Google Sheets. Formula atau rumus juga dapat menyertakan kombinasi referensi sel dan angka, misalnya:
+
+![alt text](image-45.png)
+
+# Operator pada Spreadsheet
+
+Operator adalah simbol atau tanda yang memiliki fungsi tertentu dan digunakan untuk melakukan pemrosesan atau perhitungan data. Penggunaan operator matematika erat kaitannya dengan perhitungan penjumlahan, pengurangan, dan lainnya.
+
+Begitu pula dengan perhitungan dalam Google Sheets, operator selalu digunakan dalam penulisan rumus. Penggunaan operator dalam spreadsheet, baik itu Microsoft Excel, Google Sheets, maupun lainnya; mengikuti aturan urutan umum perhitungan matematika. Misalnya, operator perkalian dan pembagian akan berjalan lebih dulu, baru setelahnya operator penjumlahan dan pengurangan. Setiap penulisan formula dalam spreadsheet pun pasti diawali dengan tanda “=” (simbol sama dengan).
+
+Mari kita lihat macam-macam operator dan kegunaannya.
+
+## Operator Aritmatika
+
+Operator aritmatika atau matematika digunakan pada aplikasi spreadsheet untuk melakukan operasi matematika dasar, seperti penambahan, pengurangan, perkalian, atau pembagian. Selain itu, operator ini juga dapat digunakan untuk menghitung nilai pangkat atau persen.
+
+![alt text](image-46.png)
+
+## Operator Perbandingan
+
+Dalam spreadsheet, biasanya kita menggunakan jenis operator perbandingan untuk fungsi-fungsi logika seperti IF, OR, AND, dan NOT. Hasilnya adalah kondisi nilai True atau False. Contohnya sebagai berikut:
+
+![alt text](image-47.png)
+
+## Operator Text
+
+Selanjutnya, ada jenis operator teks. Tahukah Anda kapan jenis operator text digunakan? Operator text yang dimaksud adalah ampersand (“&”) yang berfungsi untuk menggabungkan beberapa string text menjadi satu string tunggal. Ia biasanya menggunakan formula Concatenate.
+
+## Operator Referensi
+
+Apakah Anda familier dengan operator referensi dalam spreadsheet? Sebenarnya, secara tidak langsung kita telah menerapkan operator ini saat menulis rumus yang berhubungan dengan beberapa sel. Misalnya, rumus total =SUM(A1:A5) , artinya penjumlahan dilakukan mulai dari sel A1 hingga A5. Alhasil, bisa disimpulkan bahwa operator referensi dalam spreadsheet berguna untuk menunjukkan lokasi sel yang digunakan dalam penerapan sebuah rumus atau range data. Berikut macam-macam operator referensi yang sering digunakan dalam spreadsheet:
+
+![alt text](image-48.png)
+
+# Elemen Formula dalam Spreadsheet
+
+Pernahkah Anda menulis sebuah fungsi sederhana dalam aplikasi spreadsheet? Pada materi sebelumnya, kita sudah berkenalan dengan formula, referensi sel, dan operator yang biasanya digunakan dalam spreadsheet. Nah, kini saatnya mulai menulis formula.
+
+Akan tetapi, sebelum mulai menulis formula, ada baiknya kita mempelajari dulu elemen-elemen dalam sebuah formula.
+
+Penulisan formula dalam spreadsheet diawali dengan tanda sama dengan “=”, sedangkan bagian-bagian dalam sebuah formula dapat terdiri dari satu atau lebih elemen berikut:
+
+- Fungsi
+- Referensi sel (single/range)
+- Operator
+- Konstanta
+
+Untuk memperjelas setiap elemennya, langsung lihat penjabarannya berdasarkan gambar di bawah ini.
+
+![alt text](image-49.png)
+
+- Tanda sama dengan (“=”)
+  Tanda sama dengan “=” merupakan elemen yang paling awal ditulis dalam sebuah formula apa pun sebelum lanjut ke elemen lainnya.
+
+- Fungsi
+  Fungsi merupakan sebuah penamaan yang telah ditentukan untuk melakukan kalkulasi data berdasarkan susunan argumen dalam aplikasi spreadsheet. Misal, kita ingin menghitung rata-rata menggunakan fungsi AVERAGE, total data menggunakan fungsi SUM, dan lainnya (akan dijelaskan lebih lanjut di materi berikutnya).
+
+- Referensi Sel
+  Telah disinggung di materi sebelumnya bahwa referensi sel merupakan acuan sebuah sel atau range dalam aplikasi spreadsheet, mulai dari sheet yang sama hingga berbeda berkas atau workbook. Pada contoh gambar di atas terdapat dua jenis referensi sel yaitu range yang ditunjukkan dengan (A1:A5) dan single sel yang ditunjukkan dengan alamat sel B1.
+
+- Operator
+  Masih ingat apa itu operator dalam spreadsheet? Operator juga termasuk salah satu elemen dalam penulisan formula spreadsheet. Seperti yang dijelaskan pada materi sebelumnya, ada banyak jenis di dalam operator, yaitu operator aritmatika, perbandingan, teks, dan referensi. Pada contoh gambar penulisan formula di atas, terdapat dua jenis operator, yaitu operator aritmatika dan referensi. Operator aritmatika terdapat pada tanda pembagian (“/”) dan perkalian (“\*”), sedangkan operator referensi merujuk pada tanda titik dua (“:”) pada tulisan (A1:A5).
+
+- Konstanta
+  Konstanta merupakan nilai masukan yang bukan berasal dari perhitungan karena nilainya selalu sama dan tidak pernah berubah. Bentuk dari konstanta bisa berupa teks atau angka, misalnya dalam contoh di atas konstanta ditunjukkan dengan angka 2.
+
+# Fungsi Sum, Average, dan Count pada Spreadsheet
+
+Setelah kita mengetahui tentang elemen yang terdapat dalam formula spreadsheet, kini saatnya belajar macam-macam formula dan juga cara penulisannya. Sebelumnya, buat contoh data sederhana berisi angka sebagai berikut:
+
+![alt text](image-50.png)
+
+Berdasarkan contoh di atas, kita akan menerapkan fungsi dasar spreadsheet. Berikut uraian lengkapnya.
+
+## SUM
+
+Kita sering menemui rumus ini dalam spreadsheet. Rumus SUM dapat membantu untuk mendapatkan nilai total dari rentang sel yang dipilih. Penggunaannya dengan cara menyorot semua baris atau kolom yang ingin diketahui jumlahnya. Penulisannya sebagai berikut:
+
+```bash
+=SUM(data ke-1, data ke-2, …. , data ke-n)
+```
+
+Contoh kasus:
+
+Bagaimana cara mengetahui total semua stok dan barang yang terjual berdasarkan data penjualan ATK di atas?
+
+Pertama, kita menghitung total dari stok barang dengan rumus =SUM(B3:B12) sehingga sel yang dihitung mulai dari B3 hingga B12 dan akan menghasilkan nilai 2550.
+
+![alt text](image-51.png)
+
+Selanjutnya, kita hitung jumlah barang yang terjual. Masih menggunakan rumus fungsi yang sama yaitu =SUM(C3:C12) sehingga sel yang dihitung mulai dari C3 hingga C12 dan akan menghasilkan nilai 1150.
+
+![alt text](image-52.png)
+
+Berdasarkan perhitungan, kita dapat mengetahui total stok barang adalah 2550 unit dan total barang yang terjual adalah 1150 unit.
+
+![alt text](image-53.png)
+
+## SUMIF
+
+Selanjutnya, kita membahas fungsi SUMIF. Fungsi ini berbeda dari SUM yang biasa karena SUMIF bertujuan untuk menjumlahkan data dengan kriteria tertentu. Penulisan fungsi dari SUMIF sebagai berikut:
+
+```bash
+=SUMIF(range,”kriteria”,sum_range)
+```
+
+Jika Anda mencoba menerapkan rumus seperti =SUMIF(range,”kriteria”,sum_range) dan terjadi error atau tidak dapat terbaca di Excel atau Spreadsheet, maka gunakan tanda titik koma (;) sehingga menjadi =SUMIF(range;”kriteria”;sum_range). Hal tersebut disebabkan pengaturan delimiter dari setiap komputer terkadang berbeda-beda.
+
+Contoh kasus
+
+Kita akan menggunakan contoh data di bawah ini:
+
+![alt text](image-54.png)
+
+Misalnya, kita ingin mengetahui berapa total buku tulis berdasarkan data di atas.
+
+Jawab:
+
+Berdasarkan contoh tabel data di atas, kita dapat menuliskan rumus SUMIF pada sel G3 sebagai berikut:
+
+![alt text](image-55.png)
+
+Pada rumus di atas, range diisi dengan sel C3 sampai C12 yang merupakan kumpulan nama barang yang terjual dari tanggal 01 Februari 2020 sampai 04 Februari 2020. Kemudian, kriteria diisi dengan nama barang yang ingin dicari jumlahnya dan dalam contoh ini menggunakan “Buku tulis”. Kriteria dapat diisi dengan teks, angka, ataupun ekspresi. Terakhir, sum_range diisi dengan sel-sel yang ingin dijumlahkan datanya yang ditunjukkan pada sel D3 sampai D12. Formula tersebut menghasilkan total buku tulis yang terjual adalah 295 unit.
+
+## SUMIFS
+
+Kemudian, ada lagi fungsi yang bernama SUMIFS. Tahukah Anda perbedaan antara SUMIF dan SUMIFS? Secara penggunaan sebenarnya sama, yaitu untuk menjumlahkan data dengan kriteria tertentu. Apabila SUMIF hanya bisa menggunakan satu kriteria saja, SUMIFS dapat menggunakan lebih dari satu kriteria. Penulisannya sebagai berikut:
+
+```bash
+=SUMIFS(sum_range, kriteria_range1, “kriteria1”, kriteria_range2, “kriteria2”, dan seterusnya)
+```
+
+Contoh kasus:
+
+Masih menggunakan contoh data di bawah ini:
+
+![alt text](image-56.png)
+
+Kali ini kita ingin mengetahui berapa total buku tulis yang terjual dari tanggal 01 Februari 2020 sampai 02 Februari 2020.
+
+Jawab:
+
+Berdasarkan contoh tabel data di atas, kita dapat menuliskan rumus SUMIFS pada sel G3 sebagai berikut:
+
+![alt text](image-57.png)
+
+```bash
+=SUMIFS(D3:D12,C3:C12,"Buku tulis",B3:B12,">=01/02/2020",B3:B12,"<=02/02/2020")
+```
+
+Pada contoh penjelasan gambar dan rumus di atas, sum_range diisi dengan sel-sel yang ingin dijumlahkan datanya. kriteria_range1 berisi nama barang yang ditunjukkan oleh sel C3 sampai C12. kriteria1 yang ingin kita cari adalah "Buku tulis" dan kriteria2 yang kita cari adalah buku tulis yang terjual pada atau setelah tanggal 01 Februari 2020 dan yang terjual pada atau sebelum tanggal 02 Februari 2020. Alhasil, buku tulis yang terjual sejumlah 175 unit.
+
+## AVERAGE
+
+Masih ingatkah Anda dengan rata-rata aritmatika? Fungsi AVERAGE sama dengan rata-rata aritmatika yang menjumlahkan semua data kemudian dibagi dengan jumlah data yang ada. Penggunaannya hampir sama dengan rumus SUM yaitu sebagai berikut:
+
+```bash
+=AVERAGE(data ke-1, data ke-2, … , data ke-n)
+```
+
+Contoh kasus:
+
+Bagaimana jika kita ingin mengetahui berapa rata-rata dari semua barang yang terjual dalam tabel data penjualan ATK?
+
+Kita dapat menghitung rata-rata jumlah semua barang yang terjual dengan rumus =AVERAGE(C3:C12)sehingga sel yang dihitung mulai dari C3 hingga C12.
+
+![alt text](image-58.png)
+
+Berdasarkan perhitungan, kita dapat mengetahui rata-rata dari semua barang yang terjual adalah 115 unit.
+
+![alt text](image-59.png)
+
+## COUNT
+
+COUNT merupakan fungsi yang dapat menghitung banyaknya sel terpilih dalam rentang tertentu yang berisi nilai numerik. Penggunaan fungsi COUNT sebagai berikut:
+
+```bash
+=COUNT(data ke-1, data ke-2, … , data ke-n)
+```
+
+Contoh kasus:
+
+Dalam contoh penggunaan COUNT, kita modifikasi sedikit tabel data penjualan ATK untuk memperjelas penggunaan fungsi ini. Contoh perubahannya sebagai berikut:
+
+![alt text](image-60.png)
+
+Pertanyaannya adalah bagaimana kita mengetahui jumlah produk yang berhasil terjual berdasarkan kolom terjual?
+
+Kita mulai dengan menuliskankan rumus =COUNT(C3:C12) pada sel C13. Lebih jelasnya bisa dilihat pada gambar di bawah ini.
+
+![alt text](image-61.png)
+![alt text](image-62.png)
+
+Berdasarkan perhitungan di atas, kita dapat mengetahui barang yang berhasil terjual ada 8 jenis. Apakah Anda tahu kenapa hasilnya 8?
+
+Fungsi COUNT hanya menghitung nilai numerik (hanya angka saja) sehingga data yang berupa non-numerik (seperti sel C8) dan sel kosong (seperti sel C12) akan dilewati.
+
+## COUNTA
+
+Sama seperti COUNT, COUNTA dapat menghitung jumlah sel terpilih dalam rentang tertentu. Namun, bedanya COUNTA, kita dapat menghitung semua sel yang terpilih, tak peduli apa pun tipe data yang ada di dalamnya (angka, teks, tanggal, kondisi benar atau salah, hingga kesalahan perhitungan). Akan tetapi, terdapat satu yang dilewati dalam perhitungan COUNTA, yaitu sel yang kosong. Penggunaan rumus COUNTA sebagai berikut:
+
+```bash
+=COUNTA(data ke-1, data ke-2, … , data ke-n)
+```
+
+Contoh kasus:
+
+Pada contoh kasus ini kita masih menggunakan tabel sebelumnya.
+
+![alt text](image-63.png)
+
+Pertanyaannya adalah bagaimana kita mengetahui berapa jenis barang yang terjual berdasarkan kolom terjual (termasuk yang belum terjual)?
+
+Kita lakukan hal yang sama seperti fungsi sebelumnya, tetapi di sini menggunakan rumus =COUNTA(C3:C12) pada sel C13. Untuk lebih jelasnya, lihatlah gambar di bawah ini.
+
+![alt text](image-64.png)
+![alt text](image-65.png)
+
+Berdasarkan gambar di atas, COUNTA dari data terjual adalah 9 karena menghitung semua jenis data kecuali sel yang kosong (sel C12).
+
+## COUNTIF dan COUNTIFS
+
+Tahukah Anda apa fungsi dari COUNTIF? COUNTIF sering digunakan untuk menghitung banyaknya data pada kumpulan sel dengan kriteria tertentu. Sistematika penulisannya sebagai berikut:
+
+```bash
+=COUNTIF(range,kriteria)
+```
+
+- Range: Data COUNTIF yang dihitung.
+- Kriteria: Kondisi tertentu yang diinginkan untuk diketahui, bisa berisi teks, operasi logika, ataupun angka.
+
+Sementara itu, COUNTIFS berfungsi untuk menghitung banyaknya data pada kumpulan sel berdasarkan kriteria (lebih dari satu). Sistematika penulisannya sebagai berikut:
+
+```bash
+=COUNTIFS(kriteria_range1,kriteria1, kriteria_range2, kriteria2, dan seterusnya)
+```
+
+- Kriteria_range1 adalah range pertama yang dihitung jumlah datanya.
+- Kriteria1 adalah kondisi tertentu yang diinginkan untuk diketahui.
+- Kriteria_range2,kriteria2 adalah kriteria atau kondisi berikutnya yang ingin diketahui.
+
+Contoh kasus:
+
+Kita akan menggunakan contoh tabel berikut:
+
+![alt text](image-66.png)
+
+Berdasarkan tabel di atas, kita ingin mengetahui:
+
+- Berapa orang yang berjenis kelamin laki-laki?
+- Berapa orang yang berjenis kelamin laki-laki dan hobi bermain sepak bola?
+
+Jawab:
+
+Untuk mengetahui berapa orang yang berjenis kelamin laki-laki, kita dapat menggunakan fungsi COUNTIF seperti berikut:
+
+![alt text](image-67.png)
+
+Penulisan fungsi yang digunakan =COUNTIF(C3:C12,"L")
+
+Sementara itu, untuk mengetahui berapa orang yang berjenis kelamin laki-laki dan memiliki hobi sepak bola, kita dapat menggunakan fungsi COUNTIFS seperti berikut:
+
+![alt text](image-68.png)
+
+Penulisan fungsi yang digunakan =COUNTIFS(C3:C12,"L",D3:D12,"Sepak bola")
