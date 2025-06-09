@@ -446,3 +446,218 @@ Sementara itu, untuk mengetahui berapa orang yang berjenis kelamin laki-laki dan
 ![alt text](image-68.png)
 
 Penulisan fungsi yang digunakan =COUNTIFS(C3:C12,"L",D3:D12,"Sepak bola")
+
+# Fungsi Min, Max, Trim, Replace, Unique, dan If pada Spreadsheet
+
+## MIN dan MAX
+
+Apakah Anda pernah menggunakan fungsi MIN dan MAX sebelumnya? Kedua fungsi ini berguna untuk menentukan nilai terendah (MIN) dan tertinggi (MAX) dari suatu rentang data yang terpilih. Contoh penggunaan rumus MIN dan MAX seperti berikut:
+
+```bash
+=MIN(data ke-1, data ke-2, …, data ke-n)
+```
+
+```bash
+=MAX(data ke-1, data ke-2, …, data ke-n)
+```
+
+Contoh kasus:
+
+Kita kembali menggunakan tabel data penjualan ATK di bawah ini untuk menerapkan contoh kasus penggunaan fungsi MIN dan MAX.
+
+![alt text](image-69.png)
+
+Nah, berdasarkan tabel di atas, apa yang kita lakukan jika ingin mengetahui jumlah penjualan paling tinggi dan paling sedikit?
+
+1. Pertama, untuk mengetahui barang apa yang paling banyak terjual gunakan rumus =MAX(C3:C12).
+
+![alt text](image-70.png)
+
+Rumus MAX di atas memilih rentang data mulai dari C3 hingga C12 sehingga dapat disimpulkan bahwa angka penjualan paling banyak pada rentang data tersebut sejumlah 300.
+
+2. Selanjutnya, untuk mencari angka penjualan paling rendah, rumus yang dapat diterapkan adalah =MIN(C3:C12).
+
+![alt text](image-71.png)
+![alt text](image-72.png)
+
+Rumus MIN di atas memilih rentang data mulai dari C3 hingga C12. Kesimpulannya, angka penjualan paling sedikit pada data rentang tersebut adalah 50.
+
+## TRIM
+
+Selanjutnya, fungsi TRIM digunakan untuk menghilangkan ruang kosong yang tidak dibutuhkan pada sebuah teks. Fungsi ini hanya berjalan pada sel tunggal bukan pada rentang sel. Penggunaan rumusnya adalah sebagai berikut:
+
+```bash
+=TRIM(teks)
+```
+
+Contoh kasus:
+
+Untuk menerapkan fungsi TRIM, kita gunakan contoh kasus dengan data seperti berikut:
+
+![alt text](image-73.png)
+
+Terlihat pada contoh di atas bahwa data yang ada terlalu banyak spasi dan tidak rapi. Di sinilah kegunaan fungsi TRIM. Terapkan rumus =TRIM(A2) pada sel B2 sebagai berikut:
+
+![alt text](image-74.png)
+
+Setelah menggunakan fungsi TRIM, data yang dihasilkan pun menjadi lebih rapi. Sekarang, coba gunakan fungsi TRIM untuk merapikan data pada sel A3 dan seterusnya. Tampilan akhirnya sebagai berikut:
+
+![alt text](image-75.png)
+
+## REPLACE
+
+Selanjutnya, terdapat fungsi REPLACE. Tahukah Anda apakah fungsi REPLACE dalam spreadsheet? REPLACE dapat digunakan untuk mengganti string, baik berupa angka maupun teks biasa. Sistematika penulisan fungsi REPLACE adalah sebagai berikut:
+
+```bash
+=REPLACE(text, position, length, new_text)
+```
+
+Contoh kasus:
+
+![alt text](image-76.png)
+
+Pada contoh data di atas, terdapat 3 data yang ingin kita ganti, yaitu:
+
+- Buka diganti menjadi Buku
+- Saya membaca buku diganti menjadi Saya menulis buku
+- Saya123 diganti menjadi Aku123
+
+Mari kita praktikkan.
+
+1. Untuk contoh pertama, kita menerapkan fungsi sebagai berikut pada sel B2.
+
+![alt text](image-77.png)
+
+Berikut penjelasannya sesuai sistematika penulisannya:
+
+- Parameter 1: Text -> Dapat diisi dengan teks secara langsung atau alamat sel. Dalam contoh di atas, kita menggunakan alamat sel A2.
+
+- Parameter 2: Position -> Posisi atau urutan dari huruf yang ingin diganti. Dalam hal ini, huruf “a” yang ingin kita ganti berada di urutan ke-4 dari kata “Buka”.
+
+- Parameter 3: Length -> Panjang karakter yang ingin kita ganti. Karena yang ingin kita ganti hanya huruf “a” saja, berarti kita isi dengan 1.
+
+- Parameter 4: New_text -> Teks baru yang ingin kita gunakan untuk mengganti teks lama, bisa berupa angka atau huruf. Dalam contoh di atas, kita menggunakan huruf “u” sebagai teks baru supaya kata “Buka” bisa berganti menjadi “Buku”.
+
+2. Contoh selanjutnya, kita ingin mengganti kalimat “Saya membaca buku” menjadi “Saya menulis buku”.
+
+![alt text](image-78.png)
+
+Berikut penjelasannya sesuai sistematika penulisannya:
+
+- Parameter 1: Text -> Dapat diisi dengan teks secara langsung atau alamat sel. Dalam contoh di atas, kita menggunakan alamat sel A3.
+
+- Parameter 2: Position -> Posisi atau urutan dari huruf yang ingin diganti. Dalam hal ini, kata “membaca” yang ingin kita ganti berada di urutan ke-6 dengan spasi terhitung satu karakter.
+
+- Parameter 3: Length -> Panjang karakter yang ingin kita ganti. Karena yang ingin diganti adalah kata “membaca”, berarti kita isi dengan 7.
+
+- Parameter 4: New_text -> Teks baru yang ingin kita gunakan untuk mengganti teks lama, bisa berupa angka, huruf, dan kalimat. Dalam contoh di atas, kita menggunakan kata “menulis” sebagai teks baru supaya kata “membaca” bisa berganti menjadi “menulis”.
+
+3. Kemudian, kita juga ingin mengganti kalimat “Saya123” menjadi “Aku123”.
+
+![alt text](image-79.png)
+
+Berikut penjelasannya sesuai sistematika penulisannya:
+
+- Parameter 1: Text -> Dapat diisi dengan teks secara langsung atau alamat sel. Dalam contoh di atas, kita menggunakan alamat sel A4.
+
+- Parameter 2: Position -> Posisi atau urutan dari huruf yang ingin diganti. Dalam hal ini, kata “Saya123” hanya diganti bagian “Saya” saja sehingga urutan karakternya diisi dengan 1.
+
+- Parameter 3: Length -> Panjang karakter yang ingin kita ganti. Karena yang ingin diganti kata “Saya”, berarti kita isi dengan 4.
+
+- Parameter 4: New_text -> Teks baru yang ingin kita gunakan untuk mengganti teks lama, bisa berupa angka, huruf, dan kalimat. Dalam contoh di atas, kita menggunakan kata “Aku”.
+
+Hasil akhirnya adalah sebagai berikut:
+
+![alt text](image-80.png)
+
+## UNIQUE
+
+UNIQUE merupakan sebuah fungsi yang dapat kita gunakan untuk mencari data yang unik dari sebuah data yang mungkin saja ada yang sama. Sistematika penulisannya sebagai berikut:
+
+```bash
+=UNIQUE(range)
+```
+
+Contoh kasus:
+
+![alt text](image-81.png)
+
+Bagaimanakah jika kita ingin mengambil data yang unik saja dari data di atas?
+
+Jawab:
+
+Kita dapat menggunakan fungsi UNIQUE seperti di bawah ini:
+
+![alt text](image-82.png)
+
+Secara otomatis setelah fungsi dijalankan hasilnya akan memunculkan daftar data yang unik dari nama barang. Tidak akan muncul data yang sama seperti pada kolom C pada gambar di bawah ini:
+
+![alt text](image-83.png)
+
+## IF
+
+Fungsi IF digunakan untuk membuat perbandingan logis antara sebuah data dengan kondisi pengujian yang diberikan. Penggunaannya sebagai berikut:
+
+```bash
+=IF(Sel yang ingin diuji, [nilai jika benar], [nilai jika salah])
+```
+
+Contoh:
+
+```bash
+= IF (E4>=E3, “Ya”,”Salah”)
+```
+
+Berdasarkan contoh di atas, kita akan memeriksa apakah nilai pada sel E4 lebih besar atau sama dengan sel E3. Jika logikanya benar, nilai sel tempat fungsi tersebut menjadi bernilai “Ya”; sedangkan jika salah, maka bernilai “Salah”.
+
+## IF Sederhana
+
+Untuk menerapkan fungsi IF dalam contoh kasus, kita modifikasi contoh tabel Penjualan data seperti berikut:
+
+![alt text](image-84.png)
+
+Contoh kasus:
+
+Kita ingin mengetahui status penjualan setiap barang berdasarkan dua opsi kategori berikut: “Bagus” atau “Perlu ditingkatkan”. Kondisi untuk menentukan status tersebut adalah:
+
+- Jika barang yang terjual lebih dari 75 unit, maka statusnya masuk kategori "Bagus".
+- Jika barang yang terjual sama atau kurang dari 75 unit, maka statusnya masuk kategori "Perlu ditingkatkan".
+
+Bagaimana cara mengetahuinya?
+
+Pada alamat sel D3, masukkan rumus =IF(C3>75,"Bagus","Perlu ditingkatkan"). Fungsi tersebut memeriksa sel C3, yang berisi nilai 300, apakah lebih besar dari angka standar yang ditentukan (pada kasus ini 75).
+
+![alt text](image-85.png)
+
+Hasil dari rumus tersebut adalah “Bagus” karena 300 lebih besar daripada 75. Sekarang, gunakan rumus tersebut untuk sel lainya pada kolom D. Hasil akhir akan terlihat seperti berikut.
+
+![alt text](image-86.png)
+
+## IF Bertingkat
+
+![alt text](image-87.png)
+
+Terdapat 5 nilai siswa (lihat kolom D) dalam sebuah ulangan matematika. Bagaimana caranya jika kita ingin mengetahui nilai huruf dari kelima siswa tersebut?
+
+Jawab:
+
+Kita dapat menggunakan IF bertingkat pada alamat sel E3 seperti berikut:
+
+```bash
+=IF(D3>=90,"A",IF(D3>=80,"B",IF(D3>=70,"C",IF(D3>=60,"D","E"))))
+```
+
+![alt text](image-88.png)
+
+Pada tabel di atas terdapat, empat logika IF.
+
+- IF pertama digunakan untuk menguji apakah nilainya lebih dari atau sama dengan 90. Jika benar, maka akan mendapatkan nilai huruf A.
+- Jika salah, maka akan disambung dengan IF kedua, yaitu menguji apakah nilainya lebih dari atau sama dengan 80. Jika benar, maka akan mendapatkan nilai huruf B.
+- Jika ternyata masih salah, maka akan disambung dengan IF ketiga, yaitu menguji apakah nilai lebih besar atau sama dengan 70. Jika benar, maka akan mendapatkan nilai huruf C.
+- Terakhir, jika masih belum memenuhi kondisi, maka akan diuji apakah nilai lebih dari atau sama dengan 60. Jika benar, maka akan mendapatkan nilai D.
+- Jika tidak memenuhi kondisi di atas, berarti otomatis mendapat nilai E karena di bawah 60.
+- Jangan lupa untuk menggunakan tutup kurung sebanyak jumlah IF pada akhir fungsi.
+
+Seluruh hasilnya akan tampak sebagai berikut:
+
+![alt text](image-89.png)
