@@ -144,3 +144,139 @@ Untuk melakukan styling pada font, legend, warna, dan lainnya, lakukan konfigura
 ![alt text](image-142.png)
 
 Setelah mengetahui itu semua, saatnya Anda mencoba sendiri dan pelajari terus potensi-potensi yang ada untuk membuat grafik yang lebih kompleks dan lebih mudah dipahami.
+
+# Kesalahan Umum dalam Visualisasi Data
+
+Sudahkah Anda menerapkan visualisasi data dalam menyajikan data? Kita telah sepakat bahwa visualisasi data memudahkan audiens dalam memahami data yang dipresentasikan. Namun, apakah metode visualisasi data dapat selalu menyampaikan informasi dengan efektif?
+
+Visualisasi akan efektif jika dibuat dengan mematuhi kaidah yang ditentukan. Namun, terkadang penerapan visualisasi data dilakukan dengan cara yang sebaliknya: tak tepat dan tak patuh pedoman. Alhasil, penerapan visualisasi data kadang berujung pada informasi yang membingungkan dan ambigu. Pada akhirnya, alih-alih membuat paham, audiens jadi meragukan kebenaran data.
+
+Karena itulah, Anda perlu tahu dan hindari beberapa kesalahan umum yang sering dilakukan dalam membuat visualisasi data. Berikut ini penjelasannya:
+
+## Nilai Persentase Tidak Sesuai
+
+![alt text](image-143.png)
+
+Di atas adalah visualisasi data dalam bentuk grafik pai yang membandingkan banyaknya Small Companies (perusahaan kecil yang didefinisikan memiliki kurang dari 50 karyawan) dan Large companies (perusahaan besar yang didefinisikan memiliki 50 atau lebih karyawan).
+
+Menurut Anda, adakah yang salah dari diagram lingkaran di atas? Jika Anda mengatakan “Ya, ada yang salah”, itu sudah tepat. Alasannya, total nilai persentase yang ditunjukkan dari diagram sebesar 98% atau kurang dari 100%. Selain itu, ada juga kesalahan lainnya, yaitu besar/porsi irisan lingkaran Small Companies (42%) lebih besar daripada Large Companies (56%). Karena 42% itu lebih kecil dari 56%, maka besar porsi potongan lingkarannya pun seharusnya lebih kecil, bukan sebaliknya.
+
+Penulisan persentase dan besar porsi irisan yang merepresentasikan data harus tepat. Jika menggunakan satuan persen, maka total data yang disajikan totalnya harus 100%. Apabila menggunakan satuan derajat, maka data yang disajikan totalnya harus 360 derajat.
+
+Dari diagram di atas, jika datanya sudah tepat, maka bisa menjadi seperti berikut:
+
+![alt text](image-144.png)
+
+Besar porsi irisan juga harus sesuai dengan nilai datanya. Jangan pula menampilkan terlalu banyak irisan yang bisa berujung bias, contohnya di bawah ini:
+
+![alt text](image-145.png)
+
+Sumber: Digi-Capital, www.digi-capital.com
+
+Pasti Anda akan sulit untuk membaca informasi dari diagram lingkaran di atas. Sulit untuk membedakan data mana yang lebih besar dibandingkan lainnya. Memang idealnya irisan diagram lingkaran tak lebih dari empat irisan supaya perpotongan irisannya terlihat jelas sehingga kita tahu data mana yang lebih besar atau lebih kecil.
+
+Lantas, bagaimana kalau data yang ingin ditulis berjumlah enam? Sebagai contoh, Anda dapat menggambarkannya seperti di bawah ini:
+
+![alt text](image-146.png)
+
+“Lainnya” merupakan data hobi yang dihimpun selain sepak bola, bulu tangkis, dan basket. Bisa jadi ada menulis, membaca, dan lain sebagainya.
+
+Namun, menulis “lainnya” saja tidak cukup. Anda perlu tambahkan keterangan kategori lainnya itu berisi hobi apa saja. Jika data yang dibutuhkan sangat banyak misal lebih dari 100 data, maka kita perlu menuliskan data hobi ini dalam bentuk tabel saja, bukan diagram lingkaran.
+
+## Terlalu Banyak Data
+
+Kita telah mengetahui tujuan visualisasi data adalah membuat sebuah data yang kompleks menjadi lebih mudah dipahami dengan bentuk visual. Namun, apakah hal sebaliknya bisa saja terjadi?
+
+Ya, itu dapat terjadi jika kita memaksakan untuk memasukkan data yang berjumlah banyak. Hasilnya menjadi tidak efektif dan tentu membingungkan pembaca. Contohnya gambar di bawah ini:
+
+![alt text](image-147.png)
+
+Sumber: CB Insights, www.cbinsights.com
+
+​Begitu banyak data yang dimasukkan dalam diagram lingkaran di atas, bukan?
+
+Sebagai pembaca, kita kesulitan untuk bisa menangkap informasi apa yang ingin disampaikan oleh diagram tersebut. Seperti diulas pada poin sebelumnya, diagram lingkaran paling efektif jika hanya sampai 4 irisan data saja. Apabila terdapat banyak sekali data seperti gambar di atas, maka sebaiknya data Anda dituliskan dalam bentuk tabel saja. Hal tersebut juga berlaku untuk semua jenis diagram.
+
+## Tidak Mengikuti Standar Penulisan
+
+![alt text](image-148.png)
+
+Sumber: Reuters, www.reuters.com
+
+Saat melihat grafik di atas, apakah Anda bisa langsung mengerti tren angka pembunuhan menggunakan senjata api di Florida? Sekilas tidak ada yang salah, tetapi coba perhatikan kembali sumbu Y. Nilai yang ditunjukkan terbalik. Angka 0 berada di atas sebagai nilai minimum dan angka 1000 sebagai nilai maksimum berada di bawah. Hal tersebut sudah tidak sesuai dengan standar umum penulisan karena umumnya sumbu Y dimulai dari nilai minimum berada di bawah dan semakin ke atas akan semakin naik nilainya.
+
+Tentu saja ini berpengaruh bagi pembaca informasi karena bisa menimbulkan salah persepsi. Mereka akan mengira bahwa trennya turun, padahal dari 2005 hingga 2007 menunjukkan kenaikan apabila sumbu Y tidak terbalik. Jadi, usahakan dalam pembuatan sumbu X maupun Y, gunakanlah standar penulisan umum yang berlaku.
+
+## Terdapat Sumbu yang Terpotong
+
+Nilai pada suatu sumbu sangat penting kaitannya dengan data yang ditampilkan dalam sebuah diagram. Jika penerapannya kurang tepat, maka dapat memicu bias bagi pembacanya. Sebagai contoh, lihatlah gambar di bawah ini:
+
+![alt text](image-149.png)
+
+Sumber: Fox Business, www.foxbusiness.com
+
+Visualisasi data di atas bertujuan untuk membandingkan besarnya pajak pada saat itu (tahun 2012) dan bagaimana pajak dapat berubah pada 1 Januari 2013. Ketika dilihat sekilas, terlihat akan ada peningkatan pajak yang tinggi pada 1 Januari 2013.
+
+Namun, coba perhatikan sumbu Y. Terdapat potongan pada sumbu Y sehingga langsung dimulai dari 34%, bukan 0. Akibatnya, pembaca dapat terkecoh dan salah menyimpulkan bahkan peningkatannya akan sangat besar. Padahal nilainya hanya 35% versus 39%. Seharusnya tampilan kedua diagram batang tidak begitu berbeda tingginya. Di sini kita jadi paham bahwa setiap data pada sumbu Y mutlak harus dimulai dari 0 agar menghindari bias dan salah interpretasi data.
+
+## Penggunaan Grafik 3D yang Kurang Sesuai
+
+Pasti kita ingin visualisasi data yang disajikan terlihat keren kan? Di bawah ini merupakan visualisasi data dalam bentuk grafik pai 3D (tiga dimensi) mengenai persentase penggunaan bahasa pemrograman ketika bekerja. Apakah grafik 3D tersebut terlihat lebih keren daripada grafik 2D biasa?
+
+![alt text](image-150.png)
+
+Apa informasi yang bisa Anda dapatkan dari grafik di atas? Terlihat Kotlin lebih besar daripada Java, sedangkan Swift lebih besar daripada Python. Sekarang lihat grafik pai 2D di bawah.
+
+![alt text](image-151.png)
+
+Apa informasi yang Anda dapatkan dari grafik 2D ini? Kotlin terlihat sama besarnya dengan Java, sedangkan Python memiliki irisan pai lebih besar daripada Swift.
+
+Kagetkah Anda jika ternyata data yang digunakan untuk kedua grafik pai tersebut sama? Untuk kedua grafik pai di atas, Kotlin sebesar 37%, Java sebesar 37%, Python sebesar 15%, dan Swift sebesar 11%. Versi grafik 3D mengacaukan persepsi visual kita sehingga dapat menimbulkan kesalahan dalam memahami data.
+
+Mari kita lihat contoh grafik 3D berikutnya, yaitu grafik kolom mengenai jenis pekerjaan yang didapatkan oleh lulusan kelas. Melihat sekilas grafik di bawah, IT merupakan jenis pekerjaan yang paling banyak didapatkan lulusan, kemudian urutan peringkat berikutnya adalah jenis pekerjaan sales, marketing, dan admin.
+
+![alt text](image-152.png)
+
+Sekarang perhatikan grafik 2D di bawah. Jenis pekerjaan IT dan Sales ternyata memiliki peringkat yang sama. Terlihat ada perbedaan informasi yang dapat ditangkap oleh pembaca, padahal data yang digunakan sama. Data yang digunakan untuk kedua grafik ini adalah: IT sebanyak 50 lulusan, Marketing sebanyak 25 lulusan, Sales sebanyak 50 lulusan, dan Admin sebanyak 20 lulusan.
+
+![alt text](image-153.png)
+
+Maka dari itu, berhati-hatilah dalam menggunakan diagram tiga deimensi. Saat terselip di benak kita untuk menggunakan skema 3 dimensi dalam visualisasi, segeralah cari alternatif lain. Sekarang Anda jadi mengerti kenapa penggunaan jenis diagram 3 dimensi kurang disarankan dalam visualisasi data. Alasannya adalah menyulitkan pembaca dalam memahami data dan dapat menciptakan bias sehingga menimbulkan perbedaan persepsi tentang data yang disajikan.
+
+## Sukar Dibandingkan
+
+![alt text](image-154.png)
+
+Visualisasi data bertujuan untuk memudahkan kita membandingkan data yang ada. Namun, contoh di atas menunjukkan sebaliknya. Perbandingan dari setiap data, sulit dipahami. Pembaca sulit mengerti tujuan dan informasi apa yang ingin disampaikan.
+
+Apakah ini ingin menunjukkan sebuah tren? Apakah ini perbandingan yang perlu dilihat di dalam masing-masing grafik pai atau apakah yang perlu dilihat perbandingan antara grafik pai? Bagaimana cara pembaca bisa membandingkan besarnya irisan-irisan dalam pai? Apakah pembaca juga harus membandingkan ukuran dari masing-masing pai karena ukurannya berbeda-beda? Jika visualisasi data membuat pembaca susah mengerti dan sulit membandingkan, seharusnya kita mengganti jenis diagram yang digunakan.
+
+Referensi: Beberapa visualisasi data pada materi ini berasal dari https://viz.wtf/. Untuk melihat contoh lainnya mengenai kesalahan dalam visualisasi data, Anda dapat mengunjungi https://viz.wtf/.
+
+# Dokumentasi Data
+
+Pernahkah mendengar istilah dokumentasi data? Dokumentasi data atau yang sering disebut dengan data provenance adalah sebuah langkah untuk melihat sumber data yang kita peroleh. Kata provenance sendiri berasal dari bahasa Perancis provenir yang berarti “berasal” atau “silsilah”.
+
+Coba bayangkan Anda berperan sebagai seorang Data Analyst. Anda mendapatkan sebuah dataset (himpunan data) yang siap untuk dianalisis. Anda tidak tahu data ini berasal dari mana, bagaimana validitasnya, apakah ia akan berubah selama proses pengerjaan, dan sebagainya. Gawat kan?
+
+Dokumentasi data sangatlah penting untuk mengetahui keabsahan data dan memungkinkan kita menggunakannya kembali di waktu yang lain.
+
+W3C Provenance Incubator Group, sebuah organisasi yang bergerak di bidang pengembangan dan standarisasi teknologi web, menjelaskan tentang dokumentasi data sebagai berikut:
+
+“Catatan yang menggambarkan semua pihak dan proses dalam pembuatan, perubahan, penanganan, ataupun hal lainnya yang berpengaruh kepada data. Provenance merupakan landasan utama untuk dapat menilai keaslian dan menumbuhkan kepercayaan kepada data, sekaligus untuk mereproduksi data tersebut.”
+
+Terdengar rumit? Baiklah. Berikut ini contoh sebuah penggambaran dokumentasi data yang ditunjukkan dalam sebuah metadata. Metadata merupakan bagian penting dari data yang dipublikasi untuk menentukan kualitas, kredibilitas, reprodusibilitas hasil (terukur), serta menentukan apakah data dapat digunakan kembali atau tidak (reusable).
+
+![alt text](image-155.png)
+
+Contoh data provenance di atas didapatkan dari website Kaggle https://www.kaggle.com/datasets/sudalairajkumar/novel-corona-virus-2019-dataset/metadata. Pada gambar tersebut, terlihat dokumentasi yang menyertakan sumber data, metodologi pembuatan data, dan juga pemilik dari dataset. Berikut contoh lain dari dokumentasi data.
+
+![alt text](image-156.png)
+
+Tampilan di atas merupakan version history (sejarah versi dokumen) dari berkas Google Sheets. Semua perubahan data tercatat mulai dari tanggal hingga nama orang yang melakukan perubahan. Version history ini dapat Anda temukan saat klik bagian berikut.
+
+![alt text](image-157.png)
+
+Untuk dapat kembali ke penulisan sebelumnya, kita dapat melakukan restore version (pengembalian versi) dengan memilih dari riwayat penulisan dan klik tombol Restore this version.
+
+![alt text](image-158.png)
