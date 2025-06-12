@@ -235,3 +235,23 @@ Menggunakan data pribadi harus dilakukan dengan perhatian penuh terhadap privasi
 ## Pemeliharaan dan Pembaruan
 
 Model machine learning memerlukan pemeliharaan dan pembaruan secara berkala agar tetap relevan. Data dan pola dalam data bisa berubah seiring waktu sehingga model yang sudah ada mungkin menjadi usang jika tidak diperbarui. Proses pembaruan model melibatkan pelatihan ulang dengan data terbaru serta penyesuaian untuk memastikan model tetap efektif dan akurat dalam kondisi yang berubah.
+
+# Tantangan: Keluarkan Pendapat Anda!
+
+Mengungkapkan pendapat tentang suatu masalah dan mencari solusinya adalah keterampilan penting yang dapat diterapkan pada berbagai situasi, termasuk dalam machine learning. Proses ini melibatkan beberapa langkah, seperti mengidentifikasi masalah, menganalisisnya, dan mengembangkan solusi. Langkah-langkah tersebut dapat ditemukan dalam materi Merumuskan Masalah dalam Machine Learning.
+
+Pada Tantangan Modul 1 ini, Anda diminta untuk memilih satu topik yang ingin diselesaikan menggunakan pendekatan machine learning. Proses merumuskan masalah dan menemukan solusinya dengan machine learning memerlukan langkah-langkah yang terstruktur, mulai dari identifikasi masalah, analisis data, perumusan masalah, hingga pengembangan solusi.
+
+Menggunakan bahasa yang mudah dipahami dan memberikan tanggapan dengan sopan adalah bagian penting dalam diskusi ini. Semoga latihan ini membantu Anda memahami dan menerapkan konsep merumuskan masalah dalam machine learning.
+
+Sampaikan jawaban Anda pada forum https://www.dicoding.com/academies/184/discussions/412063 diskusi berikut.
+
+## Pendapat Lain dan Solusi Alternatif
+
+Jika ada siswa lain yang mengungkapkan pendapat atau merumuskan masalah berbeda, Anda bisa memberikan tanggapan atau solusi alternatif dengan sopan. Misalnya, jika siswa lain mengusulkan metode clustering untuk mengelompokkan mahasiswa berdasarkan kebutuhan finansial, Anda bisa menanggapi dengan mengakui validitas pendekatan tersebut dan menambahkan bahwa metode klasifikasi dapat memberikan hasil yang lebih langsung untuk menentukan kelayakan beasiswa.
+
+## Contoh Tanggapan
+
+"Saya setuju dengan pendekatan clustering yang diajukan. Itu bisa memberikan gambaran yang baik tentang kelompok-kelompok mahasiswa berdasarkan kebutuhan finansial mereka. Namun, saya juga merasa bahwa metode klasifikasi, seperti Decision Tree bisa lebih langsung dalam menentukan siapa yang layak atau tidak layak menerima beasiswa berdasarkan kriteria yang telah ditentukan. Mungkin kita bisa menggabungkan kedua pendekatan ini untuk hasil yang lebih komprehensif."
+
+Break a leg!
