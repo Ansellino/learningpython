@@ -173,3 +173,173 @@ Dengan memahami dan mengelola komponen-komponen ini dengan baik, Anda bisa memba
 Pada materi sebelumnya, kita telah membahas definisi machine learning. Apakah kamu sudah memahaminya dengan baik? Jika iya, sekarang saatnya kita melanjutkan kepada penjelasan berikutnya.
 
 ![alt text](image-12.png)
+
+## Supervised Learning
+
+Supervised learning, atau pembelajaran terawasi, merupakan jenis machine learning dengan melibatkan pelatihan model menggunakan data yang sudah diberi label. Setiap contoh dalam data pelatihan memiliki input dan output yang diketahui.
+
+![alt text](image-13.png)
+
+Tujuan supervised learning adalah mempelajari hubungan atau fungsi yang menghubungkan input dengan output. Jadi, model dapat membuat prediksi akurat untuk data baru yang belum pernah dilihat sebelumnya.
+
+Dalam supervised learning, input adalah data dengan fitur-fitur tertentu dan jawaban adalah hasil atau label yang diketahui untuk data tersebut. Model belajar dari input dan jawaban untuk mengembangkan aturan atau pola yang menghubungkan fitur dengan hasil. Aturan ini kemudian digunakan untuk memprediksi hasil dari data baru.
+
+Supervised learning bisa diibaratkan seperti seorang guru yang mengajarkan murid cara menyelesaikan tugas tertentu. Mesin atau komputer berperan sebagai murid yang belajar dari contoh-contoh yang diberikan oleh guru, yaitu data yang sudah diberi label dengan benar.
+
+![alt text](image-14.png)
+
+Misalnya, kita memiliki dataset berisi informasi tentang rumah, seperti ukuran rumah, jumlah kamar tidur, dan lokasi, yang kita sebut sebagai data latih. Setiap baris data ini sudah dilabeli dengan harga rumah yang sesuai.
+
+Dalam hal ini, ukuran rumah, jumlah kamar tidur, dan lokasi adalah fitur, sementara harga rumah adalah label/target yang kita ingin prediksi.
+
+![alt text](image-15.png)
+
+Model machine learning mempelajari data latih untuk memahami pengaruh setiap fitur, seperti ukuran rumah dan jumlah kamar tidur terhadap harga rumah. Setelah latihan selesai, model diuji menggunakan data baru, dikenal sebagai data uji, yang belum pernah dilihat sebelumnya dan tidak memiliki harga yang diketahui.
+
+![alt text](image-16.png)
+
+Data uji, seperti rumah berukuran 140 m² dengan 3 kamar tidur di Jakarta, digunakan untuk memprediksi harga berdasarkan pola yang dipelajari dari data latih. Jika data uji mirip dengan data latih, model akan memprediksi harga dalam kisaran yang sama. Jika ada perbedaan, seperti ukuran yang lebih besar atau lokasi yang berbeda, model akan menyesuaikan prediksinya.
+
+Dengan cara ini, model supervised learning dapat memprediksi harga rumah baru menggunakan informasi dari data latih.
+
+## Unsupervised Learning
+
+Unsupervised learning, atau pembelajaran tak terawasi, melibatkan pelatihan model menggunakan data yang tidak memiliki label atau hasil yang sudah ditentukan. Data ini hanya berisi fitur-fitur yang mendeskripsikan informasi, tanpa informasi tentang hasil yang seharusnya.
+
+![alt text](image-17.png)
+
+Tujuan dari unsupervised learning adalah mengidentifikasi pola, struktur, atau hubungan yang tidak langsung terlihat dalam data. Model mencari cara untuk mengelompokkan, mengidentifikasi, atau mengurangi dimensi data tanpa arahan eksplisit tentang hasil yang diinginkan.
+
+Unsupervised learning bekerja ibarat mencari pola tanpa petunjuk khusus. Bayangkan kita memiliki data tentang mobil, seperti merek, tahun pembuatan, dan jarak tempuh, tetapi tidak ada label harga atau kategori yang sudah ditentukan.
+
+![alt text](image-18.png)
+
+Ketika kita menggunakan unsupervised learning, model tidak diberi tahu tentang hal yang harus dicari atau cara mengelompokkan data. Sebagai gantinya, model mencari pola atau struktur dalam data itu sendiri.
+
+![alt text](image-19.png)
+
+Misalnya, model clustering akan menghasilkan hasil berikut.
+
+- Kelompok 1: Mobil dengan merek Toyota dan jarak tempuh rendah.
+
+Contoh mobil: ID 1, ID 5
+
+- Kelompok 2: Mobil dengan merek Ford dan jarak tempuh tinggi.
+
+Contoh mobil: ID 3, ID 6
+
+- Kelompok 3: Mobil dengan merek BMW dan jarak tempuh menengah.
+
+Contoh mobil: ID 4, ID 7
+
+Kelompok-kelompok ini adalah hasil dari analisis clustering dan sekarang berfungsi sebagai label baru untuk data. Misalnya, jika ada mobil baru yang memiliki karakteristik mirip dengan mobil pada Kelompok 1, ia akan digolongkan dalam kelompok yang sama.
+
+Dengan demikian, kelompok-kelompok ini menyediakan cara untuk mengelompokkan data berdasarkan pola yang ditemukan oleh model meskipun sebelumnya data tidak memiliki label yang jelas.
+
+Data uji berisi informasi mobil yang belum pernah dilihat oleh model selama pelatihan dan juga tidak memiliki label. Data ini digunakan untuk menguji kemampuan model clustering dalam mengelompokkan mobil baru berdasarkan fitur yang ada.
+
+![alt text](image-20.png)
+
+Kemudian, ketika kita memperkenalkan data baru tentang mobil yang belum pernah dilihat sebelumnya, seperti mobil Toyota tahun 2022 atau BMW tahun 2018, model akan mengelompokkan mobil-mobil ini dalam kelompok berdasarkan pola yang sudah dipelajari.
+
+## Semi-Supervised Learning
+
+Semi-supervised learning (SSL) adalah pendekatan dalam machine learning yang menggabungkan elemen dari supervised learning dan unsupervised learning. Dalam metode ini, model dilatih menggunakan data yang terdiri dari sebagian data berlabel (supervised) dan sebagian data tidak berlabel (unsupervised).
+
+Tujuan utama dari semi-supervised learning adalah memanfaatkan data tidak berlabel untuk meningkatkan akurasi model dengan meminimalkan ketergantungan pada data berlabel yang mungkin terbatas.
+
+Semi-supervised learning berguna ketika kita memiliki sedikit data yang sudah diberi label dan banyak data yang belum diberi label. Bayangkan kamu memiliki beberapa gambar hewan dengan label, seperti "anjing", "kucing", dan "kelinci" serta banyak gambar lainnya tanpa label.
+
+Langkah pertama adalah melatih model dengan gambar yang sudah diberi label untuk mengenali ciri-ciri, seperti bentuk telinga atau pola bulu dari masing-masing kategori. Setelah memahami ciri-ciri ini, model kemudian memeriksa gambar-gambar yang belum diberi label dan mencari pola mirip dengan yang sudah dikenali sebelumnya.
+
+![alt text](image-21.png)
+
+Misalnya, jika kamu memiliki 20 gambar yang sudah diberi label serta 200 gambar tanpa label, model akan belajar dari gambar-gambar berlabel untuk memahami perbedaan antara "anjing", "kucing", dan "kelinci". Kemudian, model akan mencoba menebak label untuk gambar tanpa label berdasarkan hal yang telah dipelajarinya. Jika melihat gambar dengan telinga panjang dan berbulu, model mungkin akan mengidentifikasinya sebagai "kelinci".
+
+Dengan metode ini, model semi-supervised learning memanfaatkan data yang belum diberi label untuk membuat prediksi lebih akurat dan efisien berdasarkan informasi yang ada dalam memperbaiki kemampuan prediksinya.
+
+Dalam semi-supervised learning, kita sering memiliki kombinasi data yang sudah diberi label dan data yang belum diberi label. Misalnya, bayangkan kita punya tabel berisi informasi tentang rumah dengan beberapa baris yang sudah lengkap termasuk ukuran rumah, jumlah kamar, lokasi, dan harga, serta beberapa baris lainnya yang hanya mencantumkan ukuran, jumlah kamar, dan lokasi tanpa harga.
+
+Data yang sudah diberi label (misalnya harga rumah sudah diketahui) digunakan untuk melatih model agar bisa memahami hubungan antara ukuran rumah, jumlah kamar, lokasi, dan harga. Setelah model belajar dari data ini, kita kemudian menggunakan model untuk memprediksi harga rumah pada baris yang belum diberi label.
+
+![alt text](image-22.png)
+
+Misalnya, kita memiliki lima rumah dengan harga yang sudah diketahui dan lima rumah lain tanpa harga. Model akan belajar dari rumah yang harganya sudah ada untuk memperkirakan harga rumah yang belum diberi label. Dengan cara ini, model dapat menggunakan informasi dari data yang sudah ada untuk memberikan prediksi lebih baik untuk data tidak lengkap.
+
+## Reinforcement Learning
+
+Reinforcement learning (RL) adalah salah satu cabang pembelajaran mesin (machine learning) berfokus pada cara agen belajar mengambil tindakan dalam lingkungan tertentu agar memaksimalkan hadiah (reward) yang diterima lingkungan itu sendiri. Dalam RL, agen belajar melalui percobaan dan kesalahan; agen mencoba tindakan tertentu, melihat hasilnya (reward), serta memperbarui pengetahuannya tentang tindakan yang lebih baik pada situasi tertentu.
+
+Di dunia RL, terdapat empat komponen utama yang membentuk inti dari cara agen belajar dan berinteraksi dengan lingkungan. Pertama, agent adalah entitas yang belajar dan bertindak. Kedua, environment adalah dunia tempat agen beroperasi. Ketiga, action adalah pilihan yang tersedia bagi agen. Keempat, state (keadaan) yang menggambarkan keadaan awal agen sebelum melakukan tindakan atau keadaan agen setelah melakukan tindakan. Terakhir, reward atau reinforcement adalah memberikan umpan balik kepada agen berdasarkan tindakan yang diambilnya.
+
+![alt text](image-23.png)
+
+Materi ini dibahas tuntas pada kelas Belajar Pengembangan Machine Learning. Jangan lupa untuk enroll kelasnya, ya!
+
+Dengan mempelajari dan menerapkan jenis-jenis machine learning ini secara tepat, Anda dapat mengembangkan solusi yang lebih efektif dan efisien, serta membuat keputusan lebih cerdas dalam berbagai konteks. Selamat belajar dan semoga pengetahuan ini membantu Anda dalam memahami machine learning lebih baik lagi!
+
+# Machine Learning Use Case
+
+Machine learning telah menjadi bagian integral dari kehidupan sehari-hari tanpa kita sadari. Dari aplikasi yang mempersonalisasi pengalaman digital kita hingga sistem yang menjaga keamanan dan kenyamanan, machine learning memainkan peran penting dalam berbagai aspek kehidupan.
+
+Penggunaan machine learning sehari-hari mencakup berbagai aplikasi, yakni rekomendasi produk, penyaringan email spam, asisten suara, dan banyak lagi. Dalam setiap kasus ini, algoritma machine learning diterapkan untuk menganalisis data, mengidentifikasi pola, serta membuat prediksi atau keputusan yang meningkatkan efisiensi dan pengalaman pengguna.
+
+Untuk memahaminya lebih lanjut, mari kita lihat secara rinci penerapan machine learning dalam sepuluh contoh penggunaan sehari-hari serta jenis pembelajaran yang digunakan pada setiap kasus.
+
+# Sistem Rekomendasi
+
+Layanan seperti Netflix atau Amazon menggunakan machine learning untuk merekomendasikan film, acara, atau produk berdasarkan riwayat aktivitas pengguna. Algoritma machine learning mempelajari preferensi Anda dari pengumpulan data, seperti film yang ditonton sebelumnya atau riwayat pembelian produk, dan mencocokkannya dengan preferensi pengguna lain yang serupa.
+
+![alt text](image-24.png)
+
+Algoritma ini bisa menggunakan teknik supervised learning atau unsupervised learning, seperti regresi atau klasifikasi, untuk memprediksi hal yang mungkin Anda suka berdasarkan data historis dan perolehan umpan balik. Ini karena algoritma dilatih menggunakan data yang telah diberi label (misalnya, film yang Anda suka atau tidak suka) untuk membuat prediksi.
+
+## Penyaringan Email Spam
+
+Pada layanan email, seperti Gmail, machine learning digunakan untuk mengidentifikasi dan memfilter email spam. Algoritma ML menganalisis pola dan konten email, seperti kata-kata yang sering muncul dalam email spam dan membandingkannya dengan email yang Anda tandai sebagai spam.
+
+![alt text](image-25.png)
+
+Dengan menggunakan teknik supervised learning, algoritma dilatih pada data email yang sudah diberi label (spam atau tidak spam) untuk mengklasifikasikan email baru. Data pelatihan terdiri dari email yang sudah diberi label sebagai spam atau tidak spam dan model dilatih untuk mengklasifikasikan email baru berdasarkan label ini.
+
+## Asisten Suara
+
+Asisten suara, seperti Siri atau Google Assistant menggunakan machine learning untuk memahami dan merespons perintah suara. Algoritma machine learning memproses bahasa alami dengan menganalisis data suara dan konteks untuk memberikan jawaban atau melakukan tindakan.
+
+![alt text](image-26.png)
+
+Ini melibatkan teknik supervised learning dalam melatih model menggunakan data percakapan berlabel dan teknik unsupervised learning untuk memahami konteks serta makna dari data suara yang tidak terstruktur.
+
+## Pengenalan Gambar atau Face Detection
+
+Facebook menggunakan machine learning untuk menandai wajah dalam foto. Algoritma pengenalan gambar mempelajari fitur wajah dari banyak foto yang telah diberi label, seperti nama orang dalam foto. Algoritma ini kemudian dapat mengenali wajah baru dan mencocokkannya dengan profil yang ada.
+
+![alt text](image-27.png)
+
+Proses ini termasuk teknik supervised learning karena model dilatih dengan data gambar berlabel. Data pelatihan berisi gambar yang sudah diberi label dengan nama orang dan model dilatih untuk mengenali wajah berdasarkan label tersebut.
+
+## Deteksi Penipuan
+
+Bank menggunakan machine learning untuk mendeteksi transaksi yang mencurigakan. Algoritma menganalisis pola transaksi normal dan menyimpang untuk mendeteksi aktivitas yang tidak biasa. Algoritma ini sering menggunakan unsupervised learning untuk menemukan pola yang tidak diketahui dalam data transaksi dan supervised learning jika data historis dengan label penipuan digunakan.
+
+![alt text](image-28.png)
+
+Unsupervised learning digunakan untuk menemukan pola baru tanpa label, sedangkan supervised learning dimanfaatkan jika data penipuan yang sudah diberi label tersedia.
+
+## Chatbot Layanan Pelanggan
+
+Chatbot menggunakan ML untuk memahami dan merespons pertanyaan pelanggan. Algoritma ini dilatih menggunakan data percakapan yang telah diberi label untuk belajar cara menjawab berbagai jenis pertanyaan.
+
+![alt text](image-29.png)
+
+Supervised learning digunakan dalam melatih model dengan data percakapan yang sudah diberi label dan unsupervised learning untuk memahami pola dari data percakapan yang lebih luas. Supervised learning berguna dalam pelatihan awal dengan data yang diberi label serta unsupervised learning dipakai untuk memahami variasi dan konteks dalam data percakapan.
+
+## Diagnostik Kesehatan
+
+Machine learning digunakan dalam analisis gambar medis, seperti MRI untuk membantu mendiagnosis penyakit. Algoritma ML dilatih dengan gambar medis yang sudah diberi label dengan kondisi kesehatan tertentu untuk mendeteksi penyakit atau kelainan.
+
+![alt text](image-30.png)
+
+Supervised learning digunakan karena model dilatih menggunakan data gambar yang sudah diberi label dengan diagnosis medis. Data pelatihan berupa gambar medis yang telah diberi label dengan kondisi kesehatan dan model dilatih untuk mengenali pola dalam gambar berdasarkan label ini.
+
+Dengan penjelasan ini, Anda dapat memahami penerapan machine learning dalam berbagai aplikasi sehari-hari dan jenis pembelajaran yang digunakan untuk masing-masing kasus.
