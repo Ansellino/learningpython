@@ -258,3 +258,184 @@ Apakah sudah mulai terbayangkan portofolio yang akan Anda bangun di kemudian har
 Machine learning adalah petualangan seru yang melibatkan banyak proses dan infrastruktur untuk membangun model yang hebat. Memahami algoritma itu penting, tetapi menguasai keseluruhan proses pembangunan machine learning hingga model siap digunakan di dunia nyata merupakan hal yang membuat Anda jadi master sejati!
 
 Nantinya di kelas Belajar Pengembangan Machine Learning, Anda akan diajak lebih jauh untuk belajar cara men-deploy model machine learning Anda ke tahap produksi. Jadi, siap-siap saja untuk melangkah lebih jauh! Terus semangat belajarnya, ya. Ciao!
+
+# Pengenalan Tools dan Library Populer pada Python untuk Machine Learning dan Data Science
+
+Python adalah kombinasi antara general-purpose programming language yang powerful dan domain-specific scripting language yang mudah digunakan. Lalu, mengapa Python sangat populer? Salah satu alasan yang menarik adalah beberapa perusahaan teknologi raksasa seperti Google dan Facebook memilih Python sebagai bahasa utama untuk framework machine learning mereka, yaitu TensorFlow dan PyTorch.
+
+![alt text](image-51.png)
+
+## Tools untuk Pemrograman Python
+
+Bersiaplah karena pada sub-modul ini kita akan menjelajahi dunia luar biasa dari tools interaktif yang sering digunakan dalam pemrograman Python! Kelas ini akan mengenalkan Anda pada tiga tools yang sering kali menjadi senjata andalan para ahli data science dan machine learning. Tools ini tidak hanya memudahkan Anda menulis dan menjalankan kode, tetapi juga memberi Anda kekuatan untuk mengatur alur kerja dengan cara yang efisien dan menyenangkan.
+
+Ketiga tools ini adalah web-based interactive development environments yang lebih dikenal dengan sebutan Notebook. Notebook menawarkan antarmuka yang fleksibel dan user-friendly, memungkinkan Anda untuk langsung menulis kode, mengeksekusinya, dan melihat hasilnya dalam satu platform yang terpadu. Anda juga bisa membuat konfigurasi, mengatur workflow, dan mengelola proyek data science Anda dengan cara yang lebih intuitif.
+
+Apa saja tools hebat yang akan kita bahas? Ayo, kita mulai petualangan kita sekarang dan temukan bagaimana Notebook bisa menjadi katalisator untuk kemajuan Anda di dunia data science dan machine learning!
+
+### Jupyter Notebook
+
+Jupyter Notebook adalah perangkat lunak gratis, open-source, dan layanan web yang mendukung berbagai bahasa pemrograman, termasuk Python.
+
+![alt text](image-52.png)
+
+Jupyter Notebook memberi Anda kekuatan untuk menulis kode, menjalankannya, dan langsung melihat hasilnya dalam satu platform yang intuitif. Instalasi Jupyter Notebook sangat mudah dan bisa dilakukan dengan beberapa cara. Silakan kunjungi panduan resmi Jupyter Notebook https://docs.jupyter.org/en/latest/install.html untuk detail lebih lanjut. Jika Anda tidak sabar untuk langsung mulai, gunakan Jupyter Notebook langsung di browser Anda dengan mengunjungi https://jupyter.org/try, lalu pilih Jupyter Notebook. Selamat bersenang-senang dengan mengeksplorasi potensi tak terbatas dengan Jupyter Notebook, enjoy!
+
+### Google Colaboratory
+
+Selanjutnya, mari kita kenalan dengan Google Colaboratory, atau yang sering disebut Colab—alat revolusioner yang memungkinkan Anda menulis dan menjalankan kode Python langsung melalui browser.
+
+![alt text](image-53.png)
+
+Colab adalah salah satu sahabat terbaik Anda dalam dunia machine learning dan analisis data, terutama jika Anda baru mulai mengeksplorasi bidang ini. Tidak perlu repot menginstal apa pun, cukup buka browser dan kunjungi https://colab.research.google.com/notebooks/ untuk langsung mulai petualangan bersama Colab.
+
+### IBM Watson Studio
+
+IBM Watson Studio merupakan salah satu layanan dari IBM yang banyak digunakan oleh analis dan ilmuwan data. Anda juga dapat menjalankan kode secara online pada layanan seperti IBM Watson Studio tanpa perlu menginstal perangkat lunak apa pun pada komputer. Sebelum menggunakan IBM Watson Studio, buatlah akun IBM Cloud terlebih dahulu. Akun IBM Cloud dapat dipakai untuk mengakses IBM Watson Studio, IBM Watson Machine Learning, dan IBM Cloud.
+
+![alt text](image-54.png)
+
+Lakukan beberapa hal berikut untuk mengakses IBM Watson Studio.
+
+- Buatlah akun pada IBM Cloud dengan mengunjungi tautan ini kemudian lakukan registrasi menggunakan email Anda.
+
+- Selanjutnya, setelah akun Anda jadi, login ke IBM Cloud dengan mengunjungi tautan https://cloud.ibm.com/login. Isi kolom IBMid dengan email yang telah Anda daftarkan di tahap sebelumnya.
+
+- Setelah login ke akun IBMCloud, ketiklah Object Storage pada search bar. Pada laman Object Storage, pilih Lite pada bagian Plan. Perhatikan bahwa satu akun hanya dapat memiliki 1 Object Storage bertipe Lite. Jika Anda telah membuat object storage bertipe Lite sebelumnya, Anda harus menghapus dahulu object storage tersebut untuk bisa membuat object storage lite baru.
+
+- Langkah berikutnya adalah login ke IBM Watson Studio menggunakan akun IBM Cloud Anda melalui tautan berikut.
+
+- Terakhir, buatlah Project di lBM Watson Studio dan tambahkan Asset baru (Jupyter Notebook Editor) dalam project Anda.
+
+Sampai pada tahap ini, Diana dan Bilqis sudah memiliki senjata yang cukup lengkap untuk memulai ke jenjang yang lebih serius. Tentunya Anda juga perlu menentukan tools yang paling cocok dengan preferensi sehingga dapat memaksimalkan pengalaman Anda ketika membangun model machine learning.
+
+## Library Populer untuk Machine Learning dan Data Science
+
+Python telah menjadi bahasa pilihan bagi banyak data scientist dan engineer karena kekayaan ekosistem library yang dimilikinya. Library ini mempermudah berbagai aspek dalam data science dan machine learning, mulai dari manipulasi data, visualisasi, hingga pengembangan model machine learning. Dalam materi ini, kita akan membahas beberapa library Python yang paling populer dan sering digunakan dalam bidang ini.
+
+### NumPy
+
+NumPy https://numpy.org/ adalah library dasar untuk komputasi numerik di Python. Library ini menyediakan dukungan untuk array multidimensi dan berbagai fungsi matematika yang cepat dan efisien.
+
+![alt text](image-55.png)
+
+NumPy sangat terkenal sebagai library untuk memproses larik atau array. Fungsi-fungsi kompleks di baliknya membuat Numpy sangat tangguh dalam memproses larik multidimensi dan matriks berukuran besar. Library ML seperti TensorFlow juga menggunakan Numpy untuk memproses tensor atau sebuah larik N dimensi.
+
+Fungsi utama NumPy bertugas untuk melakukan operasi vektor dan matriks, aljabar linear, transformasi fourier, dan fungsi matematika lainnya. Berikut contoh penggunaan NumPy.
+
+```bash
+import numpy as np
+array = np.array([1, 2, 3, 4])
+print(array.mean())  # Output: 2.5
+```
+
+### Pandas
+
+Pandas https://pandas.pydata.org/ adalah library yang digunakan untuk manipulasi dan analisis data, terutama data yang terstruktur dalam bentuk tabel. Dengan Pandas, Anda dapat dengan mudah melakukan operasi filtering, agregasi, dan manipulasi data lainnya.
+
+![alt text](image-56.png)
+
+Pandas menjadi salah satu library favorit untuk analisis dan manipulasi data. Kenapa keduanya penting? Sebelum masuk ke tahap pengembangan model, data perlu diproses dan dibersihkan. Proses ini bahkan merupakan proses yang paling banyak memakan waktu dalam pengembangan proyek machine learning. Library pandas membuat pemrosesan dan pembersihan data menjadi lebih mudah. Berikut contoh penggunaan Pandas.
+
+```bash
+import pandas as pd
+df = pd.read_csv('data.csv')# Masukkan alamat penyimpanan file Anda
+print(df.head())  # Menampilkan 5 baris pertama dari dataset
+```
+
+### Matplotlib
+
+https://matplotlib.org/ Matplotlib adalah sebuah library untuk membuat plot atau visualisasi data dalam 2 dimensi. Matplotlib mampu menghasilkan grafik dengan kualitas tinggi. Matplotlib dapat dipakai untuk membuat plot seperti histogram, scatter plot, grafik batang, pie chart, hanya dengan beberapa baris kode. Library ini sangat ramah pengguna.
+
+![alt text](image-57.png)
+
+Bahkan Seaborn dibangun di atas Matplotlib dan menawarkan antarmuka yang lebih ramah pengguna serta visualisasi statistik yang lebih canggih. Fungsi utama Matplotlib adalah membuat grafik dasar seperti bar plot, scatter plot, dan histogram (Matplotlib) dan membuat visualisasi statistik seperti heatmap, box plot, dan violin plot (Seaborn). Berikut adalah contoh penggunaan Matplotlib.
+
+```bash
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set(style="darkgrid")
+sns.histplot(data=df, x="column1") #Pastikan Anda sudah mengimport dataframe
+plt.show()
+```
+
+### Scikit Learn
+
+https://scikit-learn.org/stable/ Scikit-Learn adalah library machine learning yang menyediakan berbagai algoritma pembelajaran mesin serta alat untuk preprocessing data, evaluasi model, dan tuning hyperparameter.
+
+![alt text](image-58.png)
+
+Scikit Learn merupakan salah satu library machine learning yang sangat populer. Scikit Learn menyediakan banyak pilihan algoritma machine learning yang dapat langsung dipakai, seperti klasifikasi, regresi, clustering, dimensionality reduction, dan pemrosesan data. Selain itu Scikit Learn juga dapat dipakai untuk analisis data.
+
+Nah, pada kelas ini kita akan sering bermain-main dengan Scikit Learn baik itu untuk menangani klasifikasi, regresi hingga klastering. Menarik, ‘kan? Sebelum kita bermain, alangkah baiknya mengetahui fungsi utama dari alat yang akan digunakan.
+
+Fungsi utama Scikit Learn adalah.
+
+- Implementasi algoritma machine learning seperti klasifikasi, regresi, dan clustering.
+- Pipeline untuk mengotomatisasi alur kerja machine learning.
+- Alat evaluasi model seperti cross-validation dan metrik performa.
+
+### TensorFlow
+
+![alt text](image-59.png)
+
+https://www.tensorflow.org/ TensorFlow adalah framework open source untuk machine learning yang dikembangkan dan digunakan oleh Google. TensorFlow memudahkan pembuatan model ML bagi pemula maupun ahli. Ia dapat dipakai untuk deep learning, computer vision, pemrosesan bahasa alami (Natural Language Processing), serta reinforcement learning.
+
+### PyTorch
+
+![alt text](image-60.png)
+
+https://pytorch.org/ Dikembangkan oleh Facebook, PyTorch adalah library yang dapat dipakai untuk masalah ML, computer vision, hingga pemrosesan bahasa alami. Bersaing dengan TensorFlow khususnya sebagai framework machine learning, PyTorch lebih populer di kalangan akademisi dibanding TensorFlow. Namun, dalam industri, TensorFlow lebih populer karena skalabilitasnya lebih baik dibanding PyTorch.
+
+### Keras
+
+![alt text](image-61.png)
+
+https://keras.io/ Keras adalah library deep learning yang luar biasa. Salah satu faktor yang membuat Keras sangat populer adalah penggunaannya yang minimalis dan simpel dalam mengembangkan deep learning. Keras dibangun di atas TensorFlow yang menjadikan Keras sebagai API dengan level lebih tinggi (Higher level API) dari TensorFlow sehingga antarmukanya lebih mudah dari TensorFlow. Keras sangat cocok untuk mengembangkan model deep learning dengan waktu yang lebih singkat atau untuk pembuatan prototipe.
+
+### NLTK dan SpaCy
+
+https://www.nltk.org/ NLTK (Natural Language Toolkit) dan SpaCy adalah library untuk Natural Language Processing (NLP). NLTK lebih banyak digunakan dalam riset dan pendidikan, sedangkan SpaCy lebih fokus pada kecepatan dan produksi.
+
+Fungsinya NLTK dan SpaCy adalah sebagai berikut.
+
+- Melakukan pemrosesan teks seperti tokenisasi, stemming, dan lemmatization.
+- Ekstraksi entitas bernama, parsing sintaksis, dan analisis teks.
+- Pipeline NLP yang lengkap untuk aplikasi seperti analisis sentimen dan chatbot.
+
+Berikut adalah contoh penggunaan NLTK.
+
+```bash
+import nltk
+sentence = """At eight o'clock on Thursday morning
+... Arthur didn't feel very good."""
+tokens = nltk.word_tokenize(sentence)
+tokens
+# ['At', 'eight', "o'clock", 'on', 'Thursday', 'morning', 'Arthur', 'did', "n't", 'feel', 'very', 'good', '.']
+tagged = nltk.pos_tag(tokens)
+tagged[0:6]
+# [('At', 'IN'), ('eight', 'CD'), ("o'clock", 'JJ'), ('on', 'IN'), ('Thursday', 'NNP'), ('morning', 'NN')]
+```
+
+### SciPy
+
+![alt text](image-62.png)
+
+https://scipy.org/ SciPy adalah library yang menyediakan berbagai algoritma dan fungsi untuk komputasi ilmiah dan teknik. SciPy sering digunakan bersama NumPy untuk operasi yang lebih kompleks. Fungsi utama dari library ini untuk melakukan optimisasi, integrasi, dan pemecahan persamaan diferensial serta pengolahan sinyal dan gambar, serta analisis statistik. Berikut adalah contoh penggunaan library SciPy.
+
+```bash
+from scipy import optimize
+
+def f(x):
+    return x**2 + 5*x + 6
+
+result = optimize.minimize(f, 0)
+print(result)
+```
+
+Nah, di atas adalah beberapa contoh library yang sering digunakan dalam pengembangan machine learning. Tentunya masih banyak sekali library lainnya yang bisa membantu Anda membangun model machine learning dengan optimal.
+
+Dengan menguasai beberapa library tersebut, Diana dan Bilqis akan memiliki fondasi yang kuat dalam dunia machine learning dan data science. Perlu Anda catat bahwa setiap library memiliki keunggulan dan kegunaannya masing-masing, alat ini akan membantu Anda untuk melakukan berbagai tugas mulai dari manipulasi data hingga pengembangan model machine learning yang canggih.
+
+Sebagai catatan, silakan pelajari dan eksplorasi lebih lanjut setiap library yang ada untuk memperdalam pemahaman Anda, ya. Sampai jumpa pada latihan modul berikutnya!
