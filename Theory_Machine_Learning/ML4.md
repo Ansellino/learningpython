@@ -334,3 +334,31 @@ Cara Load: pd.read_clipboard()
 Deskripsi: Pandas dapat membaca data langsung dari clipboard (misalnya, hasil copy-paste dari spreadsheet) yang memudahkan pengambilan data cepat untuk analisis.
 
 Selain tipe-tipe data di atas, ada berbagai macam file yang bisa diolah menggunakan Pandas. Anda bisa membaca lebih lengkapnya pada Pandas Documentation https://pandas.pydata.org/pandas-docs/stable/reference/io.html, ya. Ngomong-ngomong pada kelas ini kita akan sering menggunakan data csv dan excel, jadi silakan kuasai kedua tipe tersebut ya.
+
+# Latihan: Data Loading
+
+Masih ingatkah tentang data yang telah Anda unduh sebelumnya pada materi Data Collecting terkait housing price? Jika Anda telisik lebih dalam pada file zip (sebuah file ekstensi) terdapat beberapa file seperti data_description.txt, sample_submission.csv, test.csv dan train.csv. Seluruh file yang akan kita gunakan bertipe CSV (Comma Separated Value(s)) sehingga Anda dapat menggunakan Pandas seperti berikut.
+
+![alt text](image-75.png)
+
+Jika kita konversi pada studi kasus yang akan diselesaikan, kode yang dibuat akan seperti berikut.
+
+```bash
+import pandas as pd
+test = pd.read_csv("/content/test.csv")
+test.head()
+```
+
+![alt text](image-76.png)
+
+```bash
+train = pd.read_csv("/content/train.csv")
+train.head()
+```
+
+![alt text](image-77.png)
+
+Setelah dataset dimuat, langkah berikutnya biasanya adalah pembersihan data (data cleaning), eksplorasi data (data exploration), dan preprocessing sebelum akhirnya Anda melanjutkan ke tahap pelatihan model. Sampai pada tahap ini, Anda akan memastikan bahwa dataset sudah sesuai dengan format dan struktur yang dibutuhkan oleh algoritma machine learning yang akan digunakan.
+
+Catatan
+Walaupun terlihat sangat sederhana dan mudah loading dataset adalah langkah pertama dan esensial dalam proses machine learning. Proses ini melibatkan pengambilan data dari sumber eksternal dan memuatnya ke dalam lingkungan kerja untuk dianalisis lebih lanjut. Dengan dataset yang sudah dimuat, Anda bisa memulai proses eksplorasi, pembersihan, dan pelatihan model machine learning, yang semuanya bergantung pada kualitas dan kesiapan data yang Anda miliki.
