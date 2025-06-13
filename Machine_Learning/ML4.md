@@ -218,3 +218,119 @@ Sekarang, Anda akan mencari dataset yang sesuai di Kaggle. Ikuti langkah-langkah
 - Terakhir, setelah memilih dataset yang dirasa sesuai dengan permasalahan yang akan diselesaikan, Anda bisa mengunduhnya dengan mengeklik tombol Download.
 
 Setelah mengunduh dataset, pahami dan pastikan dataset tersebut sudah sesuai dengan kebutuhan Anda. Biasanya, dataset dari Kaggle sudah terstruktur dengan baik, tetapi Anda tetap harus memahami struktur data dan mempersiapkannya sebelum digunakan dalam model machine learning. Untuk mengetahui langkah selanjutnya, mari kita lanjutkan perjalanan yang menyenangkan ini pada materi berikutnya, yaitu tentang Data Loading.
+
+# Data Loading
+
+Sampai pada tahap ini jangan biarkan data yang sudah dikumpulkan menjadi sia-sia. Agar data yang sudah siap diolah dapat digunakan, Diana perlu melakukan loading atau memuat dataset.
+
+![alt text](image-74.png)
+
+Loading dataset dalam konteks machine learning adalah proses mengimpor atau memasukkan data ke dalam lingkungan pemrograman atau sistem yang digunakan untuk pengembangan model machine learning. Dataset ini berfungsi sebagai input yang akan digunakan oleh model untuk belajar dan membuat prediksi.
+
+Proses loading dataset biasanya mencakup pengambilan data dari sumber eksternal (seperti file CSV, database, API, atau sumber lain) lalu memuatnya ke dalam struktur data yang sesuai di dalam bahasa pemrograman atau framework yang digunakan. Dalam banyak kasus, bahasa pemrograman seperti Python menggunakan library Pandas untuk memuat dataset ke dalam format yang mudah disesuaikan, seperti DataFrame.
+
+Ada beberapa hal yang perlu Anda ketahui terkait pentingnya data loading.
+
+- Sebagai Langkah Awal: loading dataset adalah langkah pertama yang sangat penting dalam alur kerja machine learning. Tanpa data, Anda tidak bisa melatih atau menguji model.
+- Memastikan Integritas Data: proses loading juga memberikan kesempatan untuk memverifikasi bahwa data dimuat dengan benar dan sesuai dengan harapan. Misalnya, memeriksa apakah semua kolom dimuat dengan tipe data yang benar dan apakah ada data yang hilang atau tidak.
+- Verifikasi Kesiapan Data: dataset yang sudah di-load ke dalam struktur data yang sesuai akan memudahkan proses berikutnya, seperti eksplorasi, pembersihan data, transformasi, dan pelatihan model.
+
+Pandas mendukung berbagai ekstensi file yang digunakan untuk menyimpan dan memanipulasi data. Dengan kemampuannya untuk membaca berbagai format, Pandas memberikan fleksibilitas luar biasa dalam menangani data dari berbagai sumber dan memudahkan proses analisis data di Python. Berikut adalah tipe file yang dapat diolah menggunakan Pandas.
+
+## CSV (Comma-Separated Values)
+
+Ekstensi: .csv
+Cara Load: pd.read_csv('file.csv')
+Deskripsi: CSV adalah format file yang sangat umum digunakan untuk menyimpan data tabular. Setiap baris dalam file CSV mewakili satu record, dan setiap nilai dalam baris dipisahkan oleh koma (atau delimiter lainnya seperti titik koma).
+
+## Excel Files
+
+Ekstensi: .xls, .xlsx
+Cara Load: pd.read_excel('file.xlsx')
+Deskripsi: Excel adalah format file yang sering digunakan untuk spreadsheet dan data tabular. Pandas dapat membaca berbagai sheet dalam file Excel dan mengonversinya menjadi DataFrame.
+
+## JSON (JavaScript Object Notation)
+
+Ekstensi: .json
+Cara Load: pd.read_json('file.json')
+Deskripsi: JSON adalah format file yang sering digunakan untuk menyimpan dan mentransfer data berbasis objek. Pandas dapat mengonversi JSON yang terstruktur dengan baik menjadi DataFrame.
+
+## HTML
+
+Ekstensi: .html
+Cara Load: pd.read_html('file.html')
+Deskripsi: Pandas dapat membaca tabel data yang ada di dalam file HTML dan mengonversinya menjadi DataFrame. Ini sering digunakan untuk scraping data dari web.
+
+## SQL Database
+
+Ekstensi: Tidak ada ekstensi khusus, data diambil dari database.
+Cara Load: pd.read_sql_query('SELECT \* FROM table_name', connection)
+Deskripsi: Pandas dapat mengakses data yang disimpan dalam tabel SQL dan mengonversinya menjadi DataFrame, dengan koneksi ke database seperti SQLite, MySQL, PostgreSQL, dll.
+
+## Parquet
+
+Ekstensi: .parquet
+Cara Load: pd.read_parquet('file.parquet')
+Deskripsi: Parquet adalah format file yang sangat efisien untuk menyimpan data kolumnar yang sering digunakan dalam big data analytics. Pandas mendukung pembacaan dan penulisan file Parquet.
+
+## HDF5 (Hierarchical Data Format)
+
+Ekstensi: .h5, .hdf5
+Cara Load: pd.read_hdf('file.h5')
+Deskripsi: HDF5 adalah format file yang dirancang untuk menyimpan data besar dalam struktur yang terorganisir. Pandas dapat membaca dan menulis data ke file HDF5.
+
+## Feather
+
+Ekstensi: .feather
+Cara Load: pd.read_feather('file.feather')
+Deskripsi: Feather adalah format file yang dioptimalkan untuk penyimpanan data tabular yang sangat cepat dan efisien, baik dalam hal pembacaan maupun penulisan.
+
+## Stata
+
+Ekstensi: .dta
+Cara Load: pd.read_stata('file.dta')
+Deskripsi: Stata adalah software statistik, dan Pandas mendukung pembacaan file .dta yang digunakan oleh Stata.
+
+## SAS (Statistical Analysis System)
+
+Ekstensi: .sas7bdat
+Cara Load: pd.read_sas('file.sas7bdat')
+Deskripsi: SAS adalah software analisis data yang digunakan untuk statistik. Pandas mendukung pembacaan file SAS.
+
+## SPSS (Statistical Package for the Social Sciences)
+
+Ekstensi: .sav
+Cara Load: pd.read_spss('file.sav')
+Deskripsi: SPSS adalah software statistik yang sering digunakan dalam ilmu sosial. Pandas dapat membaca file .sav yang digunakan oleh SPSS.
+
+## Pickle
+
+Ekstensi: .pkl
+Cara Load: pd.read_pickle('file.pkl')
+Deskripsi: Pickle adalah format serialisasi Python yang digunakan untuk menyimpan objek Python ke dalam file. Pandas dapat memuat objek DataFrame yang disimpan dalam format Pickle.
+
+## ORC (Optimized Row Columnar)
+
+Ekstensi: .orc
+Cara Load: pd.read_orc('file.orc')
+Deskripsi: ORC adalah format file yang dirancang untuk penyimpanan data kolumnar yang digunakan dalam Hadoop. Pandas mendukung pembacaan file ORC.
+
+## SQL Lite
+
+Ekstensi: .db atau .sqlite
+Cara Load: pd.read_sql_table('table_name', connection)
+Deskripsi: SQLite adalah database yang ringan dan file-based. Selain itu, Pandas juga dapat membaca tabel dari database SQLite langsung ke dalam DataFrame.
+
+## LaTeX
+
+Ekstensi: .tex
+Cara Load: pd.read_stata('file.tex')
+Deskripsi: Pandas bisa membaca dan menulis tabel LaTeX yang sering digunakan dalam dokumen akademik untuk pemformatan tabel.
+
+## Clipboard
+
+Ekstensi: Tidak ada ekstensi, data diambil dari clipboard.
+Cara Load: pd.read_clipboard()
+Deskripsi: Pandas dapat membaca data langsung dari clipboard (misalnya, hasil copy-paste dari spreadsheet) yang memudahkan pengambilan data cepat untuk analisis.
+
+Selain tipe-tipe data di atas, ada berbagai macam file yang bisa diolah menggunakan Pandas. Anda bisa membaca lebih lengkapnya pada Pandas Documentation https://pandas.pydata.org/pandas-docs/stable/reference/io.html, ya. Ngomong-ngomong pada kelas ini kita akan sering menggunakan data csv dan excel, jadi silakan kuasai kedua tipe tersebut ya.
