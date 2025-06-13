@@ -362,3 +362,63 @@ Setelah dataset dimuat, langkah berikutnya biasanya adalah pembersihan data (dat
 
 Catatan
 Walaupun terlihat sangat sederhana dan mudah loading dataset adalah langkah pertama dan esensial dalam proses machine learning. Proses ini melibatkan pengambilan data dari sumber eksternal dan memuatnya ke dalam lingkungan kerja untuk dianalisis lebih lanjut. Dengan dataset yang sudah dimuat, Anda bisa memulai proses eksplorasi, pembersihan, dan pelatihan model machine learning, yang semuanya bergantung pada kualitas dan kesiapan data yang Anda miliki.
+
+# Data Cleaning dan Transformation
+
+Anda mungkin berpikir pekerjaan data scientist atau machine learning engineer adalah membuat algoritma, mengeksplor data, membuat analisis, dan prediksi. Padahal faktanya, seseorang yang bekerja di bidang data menghabiskan sebagian besar waktunya untuk melakukan proses data cleaning. Hasil penelitian CrowdFlower dalam 2016 Data Science Report menyatakan bahwa 3 dari 5 data scientist yang disurvei menggunakan sebagian besar waktunya untuk membersihkan dan mengatur data.
+
+![alt text](image-78.png)
+
+Data Cleaning atau pembersihan data adalah proses penting dalam alur kerja machine learning yang bertujuan untuk meningkatkan kualitas dataset sebelum digunakan untuk pelatihan model. Dalam konteks machine learning, data cleaning mencakup serangkaian langkah yang dirancang untuk mendeteksi, memperbaiki, atau menghapus data yang tidak valid, tidak lengkap, tidak akurat, atau tidak relevan. Silakan simak gambar berikut dan perhatikan secara saksama.
+
+![alt text](image-79.png)
+
+Dari gambar di atas mungkin tebersit dipikiran Anda sebuah pertanyaan “mengapa data cleaning begitu penting sehingga sebagian besar waktu digunakan untuk menyelesaikan proses ini?”
+
+![alt text](image-80.png)
+
+Data cleaning memiliki peran yang vital sebab proses ini meningkatkan kualitas data yang juga berpengaruh terhadap produktivitas kerja secara keseluruhan. Data yang tidak akurat bisa berpengaruh buruk terhadap akurasi dan performa model. Saat kita melakukan proses data cleaning, kita membuang data dan informasi yang tidak dibutuhkan sehingga kita akan mendapatkan data yang berkualitas.
+
+Data yang akurat dan berkualitas akan berpengaruh positif terhadap proses pengambilan keputusan. Kita sudah familier mendengar ungkapan “Garbage In - Garbage Out?” Dalam konteks machine learning, jika input yang Anda masukkan itu buruk, sudah pasti hasil olah data pun akan buruk.
+
+Secara umum, jika kita ringkas terdapat beberapa poin penting yang perlu diketahui ketika melakukan data cleaning.
+
+- Meningkatkan Akurasi Model: data yang bersih dan berkualitas tinggi memungkinkan model untuk belajar pola yang sebenarnya dalam data, yang pada prosesnya akan meningkatkan akurasi dan kinerja model.
+- Mencegah Overfitting: data yang tidak akurat atau penuh noise bisa menyebabkan model overfitting, di mana model belajar dari data yang salah dan tidak mampu membuat prediksi yang baik pada data baru.
+- Meningkatkan Efisiensi: data yang bersih mempermudah proses analisis dan pemodelan, mengurangi kebutuhan untuk debugging atau penyesuaian model yang ekstensif di kemudian hari.
+- Memastikan Keandalan: data yang tidak bersih dapat memperkenalkan bias atau kesalahan sistematis dalam model yang dapat menyesatkan dalam pengambilan keputusan berbasis data.
+
+Sampai di sini tentu Anda sudah paham ‘kan mengapa data cleaning itu sangat penting? Oleh karena itu, data cleaning merupakan tahapan yang tidak boleh Anda lewatkan.
+
+Berdasarkan data di atas, ada beberapa tahapan umum yang harus dilakukan dalam proses data cleaning.
+
+- Mengidentifikasi dan Menangani Nilai yang Hilang (Missing Values)
+  Nilai yang hilang adalah salah satu masalah paling umum dalam data. Missing value terjadi ketika data dari sebuah record tidak lengkap. Missing value sangat memengaruhi performa model machine learning. Umumnya ada 2 (dua) opsi untuk mengatasi missing value, yaitu menghilangkan data missing value atau mengganti nilai yang hilang dengan nilai lain, seperti rata-rata dari kolom tersebut (mean) atau nilai yang paling sering muncul (modus), atau nilai tengah (median).
+
+  Jika terlalu banyak data yang hilang dalam suatu baris atau kolom, Anda mungkin memilih untuk menghapusnya. Namun, ini hanya disarankan jika data yang hilang tidak signifikan secara statistik. Di lain sisi, mengisi nilai yang hilang dengan nilai rata-rata, median, modus, atau menggunakan metode lebih canggih seperti K-Nearest Neighbors (KNN) atau regresi untuk memperkirakan nilai yang hilang menjadi pilihan yang baik ketika data yang hilang memiliki peran yang penting.
+
+- Mengidentifikasi dan Menangani Outliers
+  Outliers adalah data yang secara signifikan berbeda dari mayoritas data lainnya. Mereka bisa disebabkan oleh kesalahan pengukuran atau fenomena yang sebenarnya terjadi. Jika outliers disebabkan oleh kesalahan atau tidak relevan, mereka dapat dihapus. Namun, jika outliers merupakan bagian dari distribusi normal, transformasi seperti log transformation dapat dilakukan untuk mengurangi dampaknya.
+
+- Normalisasi dan Standardisasi Data
+  Data sering kali perlu dinormalisasi atau distandardisasi untuk memastikan bahwa fitur-fitur memiliki skala yang sama dan penting untuk algoritma tertentu seperti K-Nearest Neighbors atau Support Vector Machines.
+
+- Menangani Duplikasi Data
+  Data yang memiliki duplikat akan memengaruhi model machine learning, apalagi jika data duplikat tersebut besar jumlahnya. Untuk itu, kita harus memastikan tidak ada data yang terduplikasi.
+
+  Duplikasi dalam data dapat terjadi karena berbagai alasan, seperti kesalahan input atau penggabungan dataset dari sumber yang berbeda. Data yang diduplikasi dapat menyebabkan model memberikan bobot berlebihan pada contoh yang sama sehingga dapat memengaruhi kinerjanya.
+
+- Mengonversi Tipe Data dan Menangani Inkonsistensi Data
+  Data sering kali memiliki inkonsistensi, seperti ejaan yang berbeda untuk kategori yang sama atau format data yang tidak konsisten. Menangani inkonsistensi ini sangat penting untuk memastikan data yang bersih dan akurat.
+
+  Misalnya, sebuah variabel mungkin tidak memiliki format yang konsisten seperti penulisan tanggal 10-Okt-2020 versus 10/10/20. Format jam yang berbeda seperti 17.10 versus 5.10 pm. Penulisan uang seperti 17000 versus Rp17.000. Data dengan format berbeda tidak akan bisa diolah oleh model machine learning. Solusinya, format data harus disamakan dan dibuat konsisten terlebih dahulu.
+
+  Selain tipe data yang harus seragam, Anda perlu memastikan bahwa tipe data yang ada pada dataset sesuai dengan kebutuhan model machine learning. Terkadang, tipe data dalam dataset mungkin tidak sesuai dengan kebutuhan model. Misalnya, variabel kategorikal mungkin perlu dikonversi ke format numerik melalui teknik seperti one-hot encoding.
+
+  Terakhir, Anda perlu memastikan skala data pada setiap variabel yang ada. Sebagai contoh jika sebuah variabel memiliki jangka dari 1 sampai 100, pastikan tidak ada data yang lebih dari 100. Untuk data numerik, jika sebuah variabel merupakan bilangan positif, pastikan tidak ada bilangan negatif.
+
+Intinya data cleaning adalah langkah vital yang berfungsi untuk memastikan bahwa data yang digunakan membangun model machine learning memiliki sifat akurat, relevan, dan bebas dari kesalahan yang bisa merusak kualitas model.
+
+Dengan melakukan data cleaning secara hati-hati, Anda meningkatkan peluang untuk membangun model machine learning yang lebih baik, andal, dan mampu membuat prediksi yang akurat. Namun, perlu Anda catat bahwa proses cleaning data ini tidak bersifat wajib dilakukan semuanya. Tahapan tersebut perlu Anda cek secara mandiri karena bisa saja data yang digunakan sudah bersih karena mengambil dari pustaka open data dan sudah dibersihkan oleh author (pemilik) data.
+
+Di waktu yang akan datang, mungkin Anda akan menemukan proses atau tahapan baru karena menghadapi karakteristik yang beragam. Oleh karena itu, kuasai fondasi atau dasar proses cleaning sehingga kelak Anda bisa menghadapi semua permasalahan yang ada.
