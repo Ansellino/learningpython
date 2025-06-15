@@ -76,3 +76,64 @@ Hasil dari EDA biasanya adalah insight, hipotesis baru, pemahaman yang lebih dal
 Explanatory Data Analysis (ExDA):
 
 Output dari ExDA adalah laporan akhir, presentasi, atau dashboard yang berfungsi untuk menyampaikan hasil analisis dengan cara yang informatif dan mudah dipahami oleh audiens non-teknis.
+
+# Data Splitting
+
+![alt text](image-101.png)
+
+Data Splitting adalah proses membagi dataset menjadi beberapa subset yang terpisah untuk tujuan pelatihan, validasi, dan pengujian model machine learning. Proses ini merupakan langkah penting dalam pipeline machine learning karena membantu memastikan model yang dikembangkan mampu membuat prediksi yang baik tidak hanya pada data pelatihan, tetapi juga pada data baru yang belum pernah dilihat sebelumnya.
+
+Lalu, mengapa data splitting itu penting? Walaupun terlihat sederhana, data splitting setidaknya memiliki peran untuk menghindari overfitting, menyediakan evaluasi yang akurat, dan memberikan validasi yang adil. Selain dari ketiga peran tersebut sebenarnya masih banyak hal yang membuat data splitting itu penting, tetapi pada kesempatan kali ini mari kita jabarkan terlebih dahulu ketiga peran tersebut sebagai dasar pengetahuan.
+
+- Menghindari Overfitting:
+  Tanpa data splitting, model machine learning mungkin belajar terlalu banyak dari data pelatihan, termasuk noise dan outliers, sehingga kinerjanya menurun pada data baru. Data splitting membantu menguji generalisasi model pada data yang belum pernah dilihat oleh model pada proses pelatihan.
+
+- Menyediakan Evaluasi yang Akurat:
+  Dengan memisahkan data untuk pelatihan, validasi, dan pengujian kita bisa mengevaluasi kinerja model secara lebih akurat. Proses ini dapat membantu dalam memilih model terbaik dan mengatur hyperparameter dengan lebih baik.
+
+- Validasi yang Adil:
+  Data splitting memungkinkan kita untuk melakukan validasi model secara adil dengan menggunakan bagian dari data yang tidak dilibatkan dalam proses pelatihan untuk mengukur kinerja model.
+
+Lantas apa saja bagian yang perlu kita tentukan ketika melakukan splitting? Setelah melakukan splitting Anda akan memiliki beberapa set data yang berisikan kolom yang sama. Sebetulnya proses splitting ini terbagi menjadi dua kubu yang sama besar yaitu kubu dua jenis (training dan testing) dan kubu tiga jenis (training, testing dan validation). Namun, Anda tidak perlu bingung karena sejatinya kedua kubu tersebut sama dan memiliki tujuan yang serupa.
+
+![alt text](image-102.png)
+
+- Training Set
+
+Deskripsi: subset data yang digunakan untuk melatih model. Model belajar pola dari data ini dan menyesuaikan parameternya.
+Persentase Umum: biasanya 60-80% dari total dataset.
+
+- Validation Set
+
+Deskripsi: subset data yang digunakan untuk melakukan validasi selama proses pelatihan. Ini digunakan untuk tuning hyperparameter dan memilih model terbaik. Model tidak melihat data ini selama pelatihan.
+Persentase Umum: biasanya 10-20% dari total dataset.
+
+- Test Set
+
+Deskripsi: subset data yang digunakan untuk melakukan pengujian akhir setelah model selesai dilatih dan di-tuning. Ini memberikan estimasi kinerja model pada data baru.
+Persentase Umum: biasanya 10-20% dari total dataset.
+
+Rasio yang paling umum digunakan untuk data splitting adalah 70:30 atau 80:20, di mana 70-80% data digunakan untuk pelatihan (training) dan 20-30% sisanya digunakan untuk pengujian (testing). Alternatif lain yang sering digunakan adalah 60:20:20, di mana 60% data digunakan untuk pelatihan, 20% untuk validasi, dan 20% untuk pengujian.
+
+![alt text](image-103.png)
+![alt text](image-104.png)
+
+Anda perlu mempertimbangkan beberapa hal seperti berikut untuk menghasilkan pembagian yang optimal.
+
+- Imbalance Data: jika dataset memiliki distribusi kelas yang tidak seimbang, teknik seperti stratified splitting sangat penting untuk memastikan bahwa model tidak bias terhadap kelas mayoritas.
+- Data Leakage: data leakage terjadi ketika informasi dari luar set pelatihan "bocor" ke dalam proses pelatihan sehingga kinerja model di test set tampak lebih baik daripada yang sebenarnya. Splitting yang benar membantu menghindari masalah ini.
+- Randomness: randomness dalam proses splitting penting untuk memastikan bahwa pembagian data tidak bias. Namun, untuk eksperimen yang dapat direproduksi, sangat penting untuk menetapkan random_state yang tetap.
+
+## Perdebatan Mana yang Lebih Dahulu?
+
+Ada beberapa jenis preprocessing yang sebaiknya dilakukan sebelum data splitting, terutama jika preprocessing tersebut memerlukan pengetahuan tentang keseluruhan dataset seperti berikut.
+
+- Imputasi Missing Values: jika Anda memiliki missing values dalam dataset, biasanya Anda perlu mengisi nilai-nilai tersebut (misalnya, dengan rata-rata atau median) sebelum melakukan splitting. Ini karena Anda perlu mengisi missing value berdasarkan keseluruhan distribusi data, bukan hanya pada subset data tertentu.
+- Encoding Kategorikal: jika Anda melakukan encoding pada variabel kategorikal (misalnya, one-hot encoding atau label encoding), sering kali lebih baik melakukannya sebelum splitting untuk memastikan bahwa encoding konsisten di seluruh dataset.
+- Pembersihan Data Umum: pembersihan data yang melibatkan penghapusan outliers, menangani duplikasi, atau menyamakan format data juga sebaiknya dilakukan sebelum splitting. Ini memastikan bahwa data yang masuk ke proses splitting sudah dalam kondisi terbaiknya.
+
+Namun, ada jenis preprocessing lain yang sebaiknya dilakukan setelah data splitting untuk menghindari data leakage (yaitu, informasi dari test set bocor ke dalam model pelatihan) seperti berikut.
+
+- Standardisasi/Normalisasi: proses seperti standardisasi (mengubah data agar memiliki mean 0 dan standar deviasi 1) atau normalisasi (mengubah data agar berada dalam rentang tertentu) sebaiknya dilakukan setelah splitting. Ini karena Anda ingin memastikan bahwa test set benar-benar terpisah dari data pelatihan, dan standardisasi atau normalisasi dilakukan hanya berdasarkan data pelatihan.
+- Feature Engineering: teknik seperti pembuatan fitur baru atau transformasi fitur (misalnya, log transform, polynomial features) sebaiknya dilakukan setelah data splitting untuk menghindari informasi dari test set yang memengaruhi model.
+- Scaling dan PCA: teknik seperti scaling atau Principal Component Analysis (PCA) yang mengubah skala atau struktur data juga sebaiknya dilakukan setelah data splitting.
