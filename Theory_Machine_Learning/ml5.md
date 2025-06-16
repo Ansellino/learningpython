@@ -137,3 +137,146 @@ Namun, ada jenis preprocessing lain yang sebaiknya dilakukan setelah data splitt
 - Standardisasi/Normalisasi: proses seperti standardisasi (mengubah data agar memiliki mean 0 dan standar deviasi 1) atau normalisasi (mengubah data agar berada dalam rentang tertentu) sebaiknya dilakukan setelah splitting. Ini karena Anda ingin memastikan bahwa test set benar-benar terpisah dari data pelatihan, dan standardisasi atau normalisasi dilakukan hanya berdasarkan data pelatihan.
 - Feature Engineering: teknik seperti pembuatan fitur baru atau transformasi fitur (misalnya, log transform, polynomial features) sebaiknya dilakukan setelah data splitting untuk menghindari informasi dari test set yang memengaruhi model.
 - Scaling dan PCA: teknik seperti scaling atau Principal Component Analysis (PCA) yang mengubah skala atau struktur data juga sebaiknya dilakukan setelah data splitting.
+
+# Pembangunan Model (Modelling)
+
+Setelah data telah di-split menjadi training set dan test set, langkah berikutnya dalam machine learning workflow adalah data modeling. Data modeling adalah proses ketika Anda memilih, melatih, dan mengevaluasi model machine learning untuk memprediksi atau mengklasifikasikan data berdasarkan fitur/variabel yang tersedia.
+
+![alt text](image-105.png)
+
+Pembangunan model ini memiliki beberapa tahapan mulai dari memilih model yang tepat, melatih model, evaluasi model, hyperparameter tuning, pengujian hingga interpretasi model. Namun, pada kelas pemula ini Anda akan mempelajari prosesnya hingga tahapan evaluasi model. Mengapa kita membatasi terlebih dahulu tahapannya? Karena sampai pada modul ini Anda diharapkan dapat mempertebal bekal awal hingga model dapat dibangun. Tahapan hyperparameter tuning, pengujian hingga interpretasi model akan Anda pelajari pada modul-modul berikutnya agar mendapatkan pengalaman belajar yang lebih maksimal.
+
+Tanpa basa-basi lagi, mari kita bahas tahapan-tahapan di atas secara lebih dalam.
+
+## Memilih Model yang Tepat
+
+Seperti yang sudah Anda pelajari pada materisubmodul sebelumnya, memilih algoritma machine learning yang sesuai dengan masalah yang ingin diselesaikan sangatlah penting karena berhubungan dengan solusi yang ditawarkan.
+
+![alt text](image-106.png)
+
+Anda perlu mengetahui secara garis besar masalah yang ingin diselesaikan beserta karakteristik data yang digunakan. Sedikit throwback ke materi sebelumnya, beberapa hal yang perlu Anda perhatikan seperti berikut.
+
+- Regresi: jika target yang ingin diprediksi adalah data kontinu (misalnya, harga rumah), model regresi seperti Linear Regression, Ridge Regression, atau Random Forest Regressor dapat digunakan untuk menyelesaikan permasalahan tersebut.
+- Klasifikasi: jika target adalah variabel kategori (misalnya, apakah email adalah spam atau bukan), model klasifikasi seperti Logistic Regression, Decision Trees, Random Forest, atau Support Vector Machines (SVM) mungkin lebih sesuai.
+- Clustering: untuk mengelompokkan data ke dalam beberapa kategori atau cluster tanpa label yang jelas, Anda mungkin menggunakan model seperti K-Means atau DBSCAN.
+
+Selain mempertimbangkan permasalahan yang sedang dihadapi, Anda juga dapat mempertimbangkan hal berikut untuk memilih algoritma lebih dalam.
+
+- Jenis Data: apakah datanya numerik, kategorikal, atau campuran?
+- Ukuran Dataset: apakah dataset kecil, sedang, atau besar? Model yang lebih kompleks mungkin memerlukan lebih banyak data.
+- Linearitas: apakah hubungan antara fitur dan target bersifat linear atau non-linear?
+
+## Melatih Model (Training)
+
+Model akan "belajar" dari data training dengan menyesuaikan parameternya agar dapat memetakan input (fitur) ke output (target) dengan baik. Selama pelatihan, model akan menyesuaikan bobot atau koefisiennya untuk meminimalkan kesalahan antara prediksi dan nilai sebenarnya dalam training set.
+
+Ada dua hal yang perlu Anda perhatikan pada tahapan ini, yaitu fitur dan target. Fitur adalah data input yang digunakan untuk melatih model, sedangkan target adalah data output yang menjadi referensi model untuk belajar.
+
+Perlu Anda catat, pada latihan ini kita tidak akan melakukan hyperparameter tuning sehingga algoritma yang digunakan akan menghasilkan output berdasarkan konfigurasi dasarnya. Sebagai pemanasan, mari kita latih data yang sudah kita miliki dengan tiga algoritma yang berbeda.
+
+```bash
+# Melatih model 1 dengan algoritma Least Angle Regression
+from sklearn import linear_model
+lars = linear_model.Lars(n_nonzero_coefs=1).fit(x_train, y_train)
+
+# Melatih model 2 dengan algoritma Linear Regression
+from sklearn.linear_model import LinearRegression
+LR = LinearRegression().fit(x_train, y_train)
+
+# Melatih model 3 dengan algoritma Gradient Boosting Regressor
+from sklearn.ensemble import GradientBoostingRegressor
+GBR = GradientBoostingRegressor(random_state=184)
+GBR.fit(x_train, y_train)
+```
+
+## Evaluasi Model
+
+Model yang telah dilatih perlu melalui tahapan evaluasi berdasarkan validation set untuk melihat seberapa baik ia mampu memprediksi output yang benar dari input yang belum pernah dilihat sebelumnya. Metrik umum untuk evaluasi adalah accuracy, precision, recall, F1-score (untuk klasifikasi), dan Mean Squared Error (MSE) atau R-squared (untuk regresi).
+
+Karena contoh kasus yang sedang kita hadapi merupakan regresi, evaluasi yang akan akan kita gunakan adalah MAE, MSE, dan R2. Untuk melakukan evaluasi ini kita membutuhkan validation set (x_test). Validation test merupakan bagian dari data yang tidak digunakan untuk pelatihan tetapi digunakan untuk mengevaluasi model (unseen data). Mari kita lakukan evaluasi satu per satu.
+
+```bash
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+# Evaluasi pada model LARS
+pred_lars = lars.predict(x_test)
+mae_lars = mean_absolute_error(y_test, pred_lars)
+mse_lars = mean_squared_error(y_test, pred_lars)
+r2_lars = r2_score(y_test, pred_lars)
+
+# Membuat dictionary untuk menyimpan hasil evaluasi
+data = {
+    'MAE': [mae_lars],
+    'MSE': [mse_lars],
+    'R2': [r2_lars]
+}
+
+# Konversi dictionary menjadi DataFrame
+df_results = pd.DataFrame(data, index=['Lars'])
+df_results
+```
+
+![alt text](image-107.png)
+
+```bash
+# Evaluasi pada model Linear Regression
+pred_LR = LR.predict(x_test)
+mae_LR = mean_absolute_error(y_test, pred_LR)
+mse_LR = mean_squared_error(y_test, pred_LR)
+r2_LR = r2_score(y_test, pred_LR)
+
+# Menambahkan hasil evaluasi LR ke DataFrame
+df_results.loc['Linear Regression'] = [mae_LR, mse_LR, r2_LR]
+df_results
+```
+
+![alt text](image-108.png)
+
+```bash
+# Evaluasi pada model Linear Regression
+pred_GBR = GBR.predict(x_test)
+mae_GBR = mean_absolute_error(y_test, pred_GBR)
+mse_GBR = mean_squared_error(y_test, pred_GBR)
+r2_GBR = r2_score(y_test, pred_GBR)
+
+# Menambahkan hasil evaluasi LR ke DataFrame
+df_results.loc['GradientBoostingRegressor'] = [mae_GBR, mse_GBR, r2_GBR]
+df_results
+```
+
+![alt text](image-109.png)
+
+Sampai di sini, mudah ‘kan? Seperti yang dapat Anda lihat dari beberapa kode di atas memiliki struktur yang sama, yaitu .predict() dan beberapa metriks evaluasi seperti MAE, MSE, dan R2. Mari kita pelajari apa fungsi dari masing-masing function tersebut.
+
+- .predict(): fungsi .predict() pada scikit-learn digunakan untuk membuat prediksi berdasarkan model yang telah dilatih. Setelah Anda melatih model dengan data pelatihan (menggunakan .fit() pada materi sebelumnya), Anda dapat menggunakan .predict() untuk menghasilkan nilai prediksi pada data baru atau data testing.
+
+- mean_absolute_error: MAE mengukur rata-rata dari kesalahan absolut antara nilai prediksi dan nilai aktual. Ini adalah ukuran yang intuitif karena langsung menghitung seberapa jauh prediksi dari nilai sebenarnya tanpa memperhitungkan arah (positif atau negatif).
+
+- mean_squared_error: MSE mengukur rata-rata dari kuadrat kesalahan antara nilai prediksi dan nilai aktual. Karena kesalahan dikuadratkan, MSE memberikan penalti (nilai error) yang lebih besar untuk kesalahan yang lebih besar, membuatnya lebih sensitif terhadap outlier.
+
+- r2_score: R² adalah metrik statistik yang menunjukkan seberapa baik nilai prediksi mendekati nilai aktual. R² mengukur proporsi varians dari target yang dapat dijelaskan oleh fitur dalam model.
+
+## Menyimpan Model
+
+Untuk menyimpan model yang telah dilatih, Anda dapat menggunakan modul joblib atau pickle pada Python. Kedua modul ini memungkinkan Anda untuk menyimpan model ke dalam sebuah file sehingga bisa digunakan kembali di masa mendatang tanpa perlu melatih ulang model. Mari kita bahas kedua cara tersebut secara saksama.
+
+1. Joblib
+   Joblib adalah pilihan yang disarankan untuk menyimpan model scikit-learn karena lebih efisien dalam menyimpan objek model yang besar.
+
+```bash
+import joblib
+
+# Menyimpan model ke dalam file
+joblib.dump(GBR, 'gbr_model.joblib')
+```
+
+2. Pickle
+   Pickle adalah modul standar Python yang dapat digunakan untuk menyimpan hampir semua objek Python termasuk model machine learning.
+
+```bash
+import pickle
+
+# Menyimpan model ke dalam file
+with open('gbr_model.pkl', 'wb') as file:
+    pickle.dump(GBR, file)
+```
