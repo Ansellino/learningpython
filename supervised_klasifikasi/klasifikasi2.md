@@ -529,22 +529,22 @@ SVM memiliki berbagai kelebihan yang membuatnya populer dalam berbagai aplikasi,
 | Kelebihan | Kekurangan |
 | --------- | ---------- |
 
-|Margin Maksimal: SVM mencari hyperplane yang memisahkan kelas dengan margin maksimal, yang dapat meningkatkan generalisasi dan mengurangi risiko overfitting.
+| Margin Maksimal: SVM mencari hyperplane yang memisahkan kelas dengan margin maksimal, yang dapat meningkatkan generalisasi dan mengurangi risiko overfitting.
 
-|Kompleksitas Komputasi: untuk dataset besar atau fitur yang sangat banyak, pelatihan SVM bisa menjadi sangat lambat dan memerlukan banyak memori.
-
-|
-|Kemampuan Menangani Data Non-Linier: dengan penggunaan kernel trick, SVM dapat mengatasi data yang tidak dapat dipisahkan secara linier dengan baik.
-
-|Pemilihan Parameter: pemilihan parameter, seperti C, gamma, dan jenis kernel dapat memengaruhi kinerja model secara signifikan dan memerlukan tuning yang hati-hati.
+| Kompleksitas Komputasi: untuk dataset besar atau fitur yang sangat banyak, pelatihan SVM bisa menjadi sangat lambat dan memerlukan banyak memori.
 
 |
-|Kinerja yang Baik dengan Data Kecil: SVM sering kali memberikan hasil yang baik pada dataset dengan jumlah data relatif kecil jika dibandingkan dengan metode lain.
+| Kemampuan Menangani Data Non-Linier: dengan penggunaan kernel trick, SVM dapat mengatasi data yang tidak dapat dipisahkan secara linier dengan baik.
 
-|Tidak Biasa Menghasilkan Probabilitas: SVM tidak secara langsung memberikan probabilitas untuk kelas yang mungkin menjadi kendala jika probabilitas klasifikasi penting dalam aplikasi tertentu.
+| Pemilihan Parameter: pemilihan parameter, seperti C, gamma, dan jenis kernel dapat memengaruhi kinerja model secara signifikan dan memerlukan tuning yang hati-hati.
 
 |
-|Efektif pada Dimensi Tinggi: SVM dapat bekerja dengan baik pada data berdimensi tinggi, seperti dalam masalah teks dan bioinformatika, letak banyak fitur mungkin ada.
+| Kinerja yang Baik dengan Data Kecil: SVM sering kali memberikan hasil yang baik pada dataset dengan jumlah data relatif kecil jika dibandingkan dengan metode lain.
+
+| Tidak Biasa Menghasilkan Probabilitas: SVM tidak secara langsung memberikan probabilitas untuk kelas yang mungkin menjadi kendala jika probabilitas klasifikasi penting dalam aplikasi tertentu.
+
+|
+| Efektif pada Dimensi Tinggi: SVM dapat bekerja dengan baik pada data berdimensi tinggi, seperti dalam masalah teks dan bioinformatika, letak banyak fitur mungkin ada.
 
 | Interpretasi Model Sulit: hasil model SVM, terutama dengan kernel non-linier, sering kali sulit untuk diinterpretasikan atau dipahami secara intuitif.
 
