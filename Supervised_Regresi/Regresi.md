@@ -122,3 +122,178 @@ Eitsss, setelah melakukan model deployment, bukan berarti tugas Anda sebagai mac
 Kedua tahapan di atas adalah bagian integral dari siklus hidup model machine learning yang andal. Tanpa monitoring, kinerja model dapat menurun tanpa disadari sehingga dapat mengakibatkan keputusan bisnis yang salah atau pengalaman pengguna yang buruk.
 
 Dengan deployment dan monitoring yang terstruktur dan cermat, developer dapat memastikan bahwa model machine learning mereka tidak hanya berhasil dibangun, tetapi juga terus memberikan nilai dalam lingkungan produksi.
+
+# Jenis-Jenis Regression
+
+Seperti yang sudah Anda pelajari, regresi adalah salah satu teknik dalam statistik dan machine learning yang digunakan untuk memodelkan hubungan antara satu atau lebih variabel independen (input) dan variabel dependen (output).
+
+Tujuan utama regresi adalah untuk memprediksi nilai dari variabel dependen berdasarkan nilai dari variabel independen. Namun, tahukah Anda bahwa setiap jenis regresi memiliki cara kerja dan kegunaan yang berbeda?
+
+![alt text](image-8.png)
+
+Mari kita bahas jenis-jenis regresi ini secara lebih detail dengan penjelasan yang mudah dipahami.
+
+## Linear Regression
+
+Linear regression (regresi linear) adalah jenis regresi yang paling sederhana, kita akan mencoba menemukan garis lurus terbaik yang menggambarkan hubungan antara variabel independen (X) dan variabel dependen (Y).
+
+Misalnya, jika kita ingin memprediksi harga rumah berdasarkan ukuran rumah, kita bisa menggunakan regresi linear untuk menemukan garis yang paling cocok antara ukuran rumah (X) dan harga rumah (Y).
+
+Misalkan kita punya data tentang ukuran rumah dan harga jualnya. Dengan regresi linear, kita bisa membuat persamaan garis seperti ini.
+
+![alt text](image-9.png)
+
+Harga Rumah = a + b\* (Ukuran Rumah) dengan catatan a adalah intercept (titik yang memotong sumbu Y) dan b adalah kemiringan garis (seberapa banyak harga berubah dengan setiap unit perubahan ukuran rumah).
+
+Metode ini memiliki beberapa kelebihan dan kekurangan seperti.
+
+![alt text](image-10.png)
+
+Mungkin tebersit sebuah pertanyaan di benak Anda, “Bagaimana cara mengetahui hubungan antara variabel? Apakah termasuk linear atau nonlinear?” Pertanyaan yang bagus. Mari kita bahas sekilas pada materi ini.
+
+Salah satu cara paling mudah untuk mengetahui hubungan antar variabel adalah menggunakan visualisasi data seperti scatter plot. Dengan membuat scatter plot antara dua variabel, kita dapat langsung melihat pola hubungan mereka. Jika titik-titik data membentuk garis lurus (atau mendekati garis lurus), hubungan antara variabel tersebut adalah linear. Namun, jika titik-titik tersebut membentuk kurva atau pola yang melengkung, hubungan tersebut cenderung non-linear.
+
+Contoh:
+
+- Hubungan linear: titik-titik data cenderung membentuk garis lurus.
+- Hubungan non-linear: titik-titik data membentuk pola melengkung atau berbentuk U.
+
+## Multiple Linear Regression
+
+Multiple Linear Regression (Regresi Linear Berganda) adalah pengembangan dari regresi linear sederhana yang digunakan untuk memodelkan hubungan antara satu variabel dependen (terkadang disebut variabel respons atau target) dan dua atau lebih variabel independen (juga disebut prediktor atau fitur). Model ini memungkinkan kita untuk memahami bagaimana beberapa faktor memengaruhi hasil yang diinginkan secara simultan.
+
+![alt text](image-11.png)
+
+Persamaan umum untuk regresi linear berganda adalah seperti berikut.
+
+![alt text](image-12.png)
+
+Rumus di atas dapat kita interpretasikan sebagai berikut.
+
+- Y: variabel dependen (output yang ingin diprediksi).
+- a: intercept atau konstanta, yaitu nilai Y saat semua X bernilai nol.
+- b1, b2, ..., bn: koefisien regresi untuk setiap variabel independen X1,X2,...,Xn. Koefisien ini mengukur seberapa besar pengaruh masing-masing variabel independen terhadap variabel dependen.
+- X1, X2, ..., Xn: variabel independen (input atau prediktor yang memengaruhi Y).
+- ε: error term atau residu yang menangkap variasi dalam Y dan tidak bisa dijelaskan oleh variabel independen.
+
+Misalkan, kita ingin memprediksi harga rumah berdasarkan beberapa variabel seperti ukuran rumah, jumlah kamar tidur, dan usia rumah. Model regresi linear berganda akan terlihat seperti ini:
+
+Harga Rumah=a+b1(Ukuran Rumah)+b2(Jumlah Kamar Tidur)+b3(Usia Rumah)+ϵ
+
+- Jika b1 positif, itu berarti semakin besar ukuran rumah, semakin tinggi harga rumah, dengan asumsi variabel lain tetap konstan.
+- Jika b3 negatif, itu berarti semakin tua rumah, semakin rendah harga rumah, dengan asumsi variabel lain tetap konstan.
+
+Dengan menggunakan multiple linear regression, kita bisa mendapatkan pemahaman yang lebih baik tentang bagaimana berbagai faktor memengaruhi variabel dependen, membantu dalam pengambilan keputusan, dan peramalan yang lebih akurat.
+
+## Polynomial Regression
+
+Polynomial Regression (regresi polinomial) adalah bentuk lanjutan dari regresi linear yang digunakan untuk memodelkan hubungan antara variabel independen dan variabel dependen ketika hubungan tersebut tidak linear. Sebagai pengembangan dari regresi linear, metode regresi polinomial memungkinkan hubungan antara variabel untuk berbentuk kurva dengan derajat yang lebih tinggi daripada garis lurus seperti parabola atau kurva lainnya.
+
+![alt text](image-13.png)
+
+Dalam regresi polinomial Anda memodelkan hubungan antara variabel dependen Y dan satu atau lebih variabel independen X menggunakan polinomial dari derajat n. Persamaan umum untuk regresi polinomial adalah seperti di bawah ini.
+Dalam regresi polinomial Anda memodelkan hubungan antara variabel dependen Y dan satu atau lebih variabel independen X menggunakan polinomial dari derajat n. Persamaan umum untuk regresi polinomial adalah seperti di bawah ini.
+
+![alt text](image-14.png)
+
+Rumus di atas dapat kita interpretasikan sebagai berikut.
+
+- Y: variabel dependen yang ingin kita prediksi.
+  a: intercept, yaitu nilai Y saat X memiliki nilai nol.
+- b1, b2, ..., bn: koefisien regresi untuk setiap pangkat dari X. Koefisien ini menunjukkan kontribusi dari masing-masing pangkat X terhadap nilai prediksi Y.
+- X: variabel independen.
+- n: derajat dari polinomial.
+- ε: error term atau residu yang menangkap variasi dalam Y dan tidak bisa dijelaskan oleh variabel independen.
+
+Lalu, kapan Anda perlu menggunakan regresi polinomial? Ia digunakan ketika data menunjukkan hubungan non-linear antara variabel independen dan dependen. Jika kita mencoba menggunakan regresi linear pada data yang memiliki pola melengkung, model linear mungkin tidak memberikan hasil yang baik karena tidak dapat menangkap kompleksitas hubungan tersebut.
+
+Misalnya, ketika hubungan antara variabel dependen dan independen berbentuk U atau terbalik (seperti kurva parabola). Selain itu Anda juga bisa menggunakan metode ini ketika data menunjukkan pola lebih kompleks yang melibatkan titik balik atau kurva ganda.
+
+## Logistic Regression
+
+Logistic Regression (regresi logistik) adalah salah satu teknik pemodelan statistik yang digunakan untuk memprediksi hasil biner, yaitu hasil dengan dua kemungkinan, seperti "ya" atau "tidak," "sukses" atau "gagal," dan lain sebagainya. Berbeda dengan regresi linear yang digunakan untuk memprediksi nilai numerik, regresi logistik digunakan untuk memodelkan probabilitas bahwa suatu kejadian akan terjadi (hasil biner).
+
+![alt text](image-15.png)
+
+Fun fact-nya walaupun memiliki nama regresi, metode ini sering kali digunakan untuk masalah klasifikasi. Namun, tidak sepenuhnya akurat juga untuk menyebut regresi logistik sebagai klasifikasi karena regresi logistik adalah metode statistik yang memperkirakan probabilitas hasil biner, sedangkan klasifikasi adalah tugas memprediksi kategori atau kelas yang dimiliki oleh titik data baru berdasarkan sekumpulan fitur.
+
+Meskipun regresi logistik dapat digunakan untuk tugas klasifikasi, tetapi pada intinya ia masih merupakan metode regresi dan terutama digunakan untuk memperkirakan probabilitas daripada membuat klasifikasi langsung.
+
+Regresi logistik mengasumsikan bahwa hubungan antara variabel independen X dan variabel dependen Y dapat dimodelkan sebagai probabilitas yang dihasilkan dari fungsi logistik (sigmoid function). Fungsi ini mengubah input apa pun menjadi output antara 0 dan 1 yang dapat diinterpretasikan sebagai probabilitas. Persamaan dasar dari regresi logistik dapat dituliskan dengan rumus seperti berikut.
+
+![alt text](image-16.png)
+
+Rumus di atas dapat kita interpretasikan sebagai berikut.
+
+- P(Y=1): probabilitas bahwa variabel dependen Y adalah 1 (kejadian yang diinginkan terjadi).
+- a: intercept atau konstanta model.
+  b1,b2,...,bn: koefisien regresi untuk setiap variabel independen.
+- X1,X2,...,Xn: variabel independen yang memengaruhi hasil Y.
+- e: basis dari logaritma natural (sekitar 2.718).
+
+Pada intinya, logistik regresi ini merupakan salah satu algoritma yang sering digunakan untuk mengatasi permasalahan klasifikasi. So, jangan tertipu dengan namanya, ya!
+
+## Non-Linear Regression
+
+Non-linear regression adalah bentuk regresi yang digunakan untuk memodelkan hubungan antara variabel independen dan variabel dependen ketika hubungan tersebut tidak dapat dijelaskan dengan garis lurus atau fungsi linear. Dalam non-linear regression, model yang digunakan bisa berbentuk lebih kompleks, seperti eksponensial, logaritmik, kuadrat, kubik, atau bentuk fungsi lainnya.
+
+![alt text](image-17.png)
+
+Berbeda dengan linear regression yang memiliki hubungan linear dalam bentuk Y=a+bX antara variabel independen X dan variabel dependen Y, non-linear regression memungkinkan untuk mencari hubungan yang lebih rumit dibandingkan hanya garis linear saja. Model non-linear bisa berupa hampir semua bentuk matematis seperti Y=f(X)+ϵ dengan ketentuan f(X) adalah fungsi non-linear dari variabel independen X, dan ϵ adalah error term atau residu.
+
+Terdapat banyak sekali bentuk dari non-linear regression yang perlu Anda ketahui. Beberapa contohnya adalah eksponensial, logaritmik, power, polynomial (sudah kita bahas pada materi sebelumnya), kuadratik, dan lain sebagainya.
+
+![alt text](image-18.png)
+
+Berikut adalah beberapa contoh model non-linear yang sering digunakan.
+
+- Model Eksponensial
+  ![alt text](image-19.png)
+  Dengan ketentuan a dan b adalah parameter yang harus diestimasi. Model ini sering digunakan dalam situasi dengan kondisi perubahan dari Y bersifat konstan.
+
+- Model Logaritmik
+  ![alt text](image-20.png)
+  Model ini sering digunakan ketika perubahan Y melambat seiring dengan bertambahnya X.
+- Model Kuadrat (Quadratic Model)
+  ![alt text](image-21.png)
+  Model ini berguna ketika hubungan antara variabel memiliki titik balik.
+- Model Sigmoid (Logistik atau Gompertz)
+  ![alt text](image-22.png)
+  Model sigmoid sering digunakan dalam biologi, ekonomi, dan ilmu sosial untuk memodelkan pertumbuhan populasi, difusi inovasi, dan fenomena lain yang menunjukkan saturasi.
+
+## Ridge and Lasso Regression
+
+Ridge Regression dan Lasso Regression adalah dua teknik regularisasi yang digunakan dalam regresi linear untuk mengatasi masalah multikolinearitas dan overfitting.
+
+Refreshing Material
+
+Multikolinearitas adalah kondisi dua atau lebih variabel independen dalam model regresi sangat berkorelasi satu sama lain. Ini berarti bahwa salah satu variabel independen dapat diprediksi secara linear dari variabel independen lainnya dengan tingkat akurasi yang tinggi.
+
+Overfitting terjadi ketika model regresi terlalu kompleks dan terlalu fit terhadap data latih (training data) sehingga model tersebut menangkap "noise" atau fluktuasi acak dalam data selain pola yang sebenarnya. Akibatnya, model tidak bekerja dengan baik pada data baru atau data uji (test data).
+
+Meskipun kedua teknik ini bertujuan untuk menstabilkan model dan meningkatkan performa prediksi, mereka melakukannya dengan cara yang berbeda, terutama dalam hal bagaimana mereka menerapkan penalti pada koefisien regresi.
+
+![alt text](image-23.png)
+
+## Ridge Regression
+
+Ridge regression menambahkan penalti berupa jumlah kuadrat dari koefisien regresi ke dalam fungsi loss. Fungsi objektif yang diminimalkan dalam ridge regression dapat ditulis dengan rumus seperti berikut.
+
+![alt text](image-24.png)
+
+Penalti yang diterapkan membuat koefisien regresi menjadi lebih kecil (shrinkage), tetapi tidak pernah menyetel mereka menjadi nol. Ini berarti semua variabel tetap akan digunakan dalam pembangunan model, meskipun dengan koefisien yang lebih kecil. Karena tidak ada koefisien yang disetel menjadi nol, interpretasi model ridge regression lebih sederhana dalam hal mempertimbangkan kontribusi semua variabel. Namun, karena semua variabel tetap ada, interpretasi bisa menjadi sulit jika ada banyak variabel.
+
+## Lasso Regression
+
+Lasso regression menambahkan penalti berupa jumlah absolut dari koefisien regresi ke dalam fungsi loss. Fungsi objektif yang diminimalkan dalam lasso regression dapat ditulis dengan rumus seperti berikut.
+
+![alt text](image-25.png)
+
+Penalti yang diterapkan tidak hanya mengecilkan koefisien, tetapi juga dapat menyetel beberapa koefisien menjadi nol. Ini berarti Lasso regression secara efektif dapat melakukan seleksi fitur, menghilangkan variabel yang dianggap tidak signifikan dan mempertahankan variabel yang memiliki peran signifikan.
+
+Lalu, kapan waktu yang tepat untuk menggunakan ridge atau lasso regression?
+
+Ridge regression lebih cocok digunakan ketika semua variabel diharapkan memiliki pengaruh yang kecil tetapi signifikan dan tidak ingin menghilangkan variabel dari model. Ini sangat berguna dalam situasi multikolinearitas tinggi dan kita ingin menjaga semua fitur dalam model dengan koefisien yang lebih stabil. Di lain sisi, lasso regression lebih cocok ketika kita memiliki banyak variabel, tetapi kita percaya bahwa hanya sebagian kecil dari mereka yang benar-benar signifikan. Lasso membantu menyederhanakan model dengan secara otomatis menghilangkan variabel yang tidak penting.
+
+Di lain sisi, ketika memiliki kasus yang lebih kompleks, Anda dapat menggabungkan kedua metode regularisasi di atas dengan menggunakan metode Elastic Net. Elastic Net adalah teknik yang menggabungkan penalti dari Ridge dan Lasso (kombinasi L1 dan L2 regularization). Hal ini dapat memberikan fleksibilitas lebih ketika kita ingin mengontrol keduanya (jumlah fitur yang dipilih dan tingkat regularisasi).
+
