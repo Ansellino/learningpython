@@ -534,3 +534,98 @@ SVM memiliki berbagai kelebihan yang membuatnya populer dalam berbagai aplikasi,
 | Efektif pada Dimensi Tinggi: SVM dapat bekerja dengan baik pada data berdimensi tinggi, seperti dalam masalah teks dan bioinformatika, letak banyak fitur mungkin ada. | Interpretasi Model Sulit: hasil model SVM, terutama dengan kernel non-linier, sering kali sulit untuk diinterpretasikan atau dipahami secara intuitif.                                           |
 
 Dengan mempertimbangkan kelebihan dan kekurangan ini, Anda dapat menentukan bahwa SVM adalah algoritma yang tepat dalam masalah klasifikasi atau regresi yang sedang dihadapi serta cara mengoptimalkan penggunaannya untuk hasil terbaik.
+
+# Naive Bayes
+
+Naive Bayes adalah algoritma klasifikasi berbasis probabilitas yang berdasarkan pada Teorema Bayes, dengan asumsi bahwa fitur-fitur dalam data bersifat independen satu sama lain. Nama "naive" (naif) merujuk pada asumsi independensi ini, yang sering kali tidak realistis. Namun, dalam praktiknya dapat menghasilkan model yang efektif. Naive Bayes menggunakan prinsip probabilitas untuk memprediksi kelas dari data baru berdasarkan pengamatan fitur yang ada.
+
+Secara matematis, Naive Bayes bekerja dengan menghitung kemungkinan suatu data termasuk dalam kelas tertentu berdasarkan dua faktor: kemungkinan awal dari setiap kelas (probabilitas prior) dan kemungkinan fitur dalam data jika kelas tersebut benar (probabilitas likelihood).
+
+![alt text](image-33.png)
+
+Rumus untuk menghitung probabilitas posterior P(A∣B) dalam konteks Teorema Bayes sebagai berikut.
+
+![alt text](image-34.png)
+
+Setelah menghitung kemungkinan untuk setiap kelas, model ini memilih kelas dengan kemungkinan tertinggi sebagai hasil klasifikasi. Naive Bayes bisa digunakan untuk berbagai jenis data, seperti teks, gambar, atau tabel dan sering dipakai dalam aplikasi, seperti filter spam, analisis sentimen, serta pengenalan pola.
+
+## Parameter Utama Naive Bayes
+
+Dalam algoritma Naive Bayes, beberapa parameter utama perlu diatur untuk mengoptimalkan performa model. Inilah beberapa di antaranya.
+
+- Laplace Smoothing
+- Probabilitas Prior
+- Probabilitas Likelihood
+
+Mari kita bahas lebih lengkap masing-masing parameternya!
+
+### Laplace Smoothing
+
+Laplace smoothing, juga dikenal sebagai smoothing atau add-one smoothing, adalah teknik yang digunakan untuk menangani masalah ketika fitur tertentu tidak muncul dalam data pelatihan untuk kelas tertentu. Ini sering disebut "smoothing" karena menambahkan nilai kecil untuk mencegah probabilitas nol.
+
+Contoh: Jika kita tidak menambahkan smoothing dan kata "gratis" tidak muncul pada email spam, model akan menganggap bahwa kata "gratis" tidak ada dalam spam. Dengan smoothing, kita menambahkan sedikit nilai pada semua kata sehingga meskipun kata "gratis" tidak muncul, model tetap mempertimbangkan kemungkinan kecil bahwa kata ini bisa ada dalam spam.
+
+### Probabilitas Prior
+
+Probabilitas prior adalah probabilitas awal dari setiap kelas sebelum mempertimbangkan fitur yang ada. Ini menggambarkan seberapa umum atau sering suatu kelas muncul dalam data pelatihan. Ini adalah cara untuk mengetahui jumlah umum sebuah kategori sebelum kita melihat fitur-fiturnya.
+
+Contoh: Jika dalam 100 email yang kita miliki, 60 di antaranya spam, probabilitas prior untuk spam adalah 60%. Ini berarti kita sudah tahu spam adalah kategori yang lebih umum sebelum mulai menganalisis kata-katanya.
+
+### Probabilitas Likelihood
+
+Probabilitas likelihood adalah probabilitas kemunculan fitur tertentu dalam data pelatihan untuk setiap kelas. Ini menunjukkan seberapa sering fitur muncul dalam data yang sudah diberi label dengan kelas tertentu.
+
+Ini membantu kita mengerti seberapa umum fitur tersebut dalam kategori yang berbeda. Misalnya, jika kata "diskon" muncul banyak pada email yang dikategorikan sebagai spam dan jarang muncul dalam email non-spam, probabilitas likelihood kata "diskon" akan tinggi untuk spam dan rendah untuk non-spam. Ini membantu model memprediksi kategori email baru berdasarkan fitur yang ada.
+
+Contoh: Jika kita menemukan kata "diskon" muncul sebanyak 30 kali dari 50 email spam, dan hanya sebanyak 10 dari 50 email non-spam, kata "diskon" lebih umum pada spam. Jadi, model akan memberikan bobot lebih pada kata ini saat memprediksi bahwa email baru adalah spam atau bukan.
+
+## Cara Kerja Naive Bayes
+
+Naive Bayes adalah metode klasifikasi berbasis pada prinsip probabilitas dan Teorema Bayes yang digunakan untuk memprediksi kelas atau kategori dari data baru berdasarkan informasi yang telah ada.
+
+![alt text](image-35.png)
+
+Metode ini bekerja dengan cara menghitung probabilitas berbagai kelas berdasarkan fitur-fitur pada data pelatihan. Berikut adalah langkah kerja Naive Bayes.
+
+### Langkah 1: Mengumpulkan dan Menyiapkan Data
+
+Langkah pertama adalah mengumpulkan data yang akan digunakan untuk melatih model Naive Bayes. Data ini harus mencakup berbagai contoh yang sudah diberi label dengan benar. Dalam konteks klasifikasi teks, data bisa berupa kumpulan dokumen dengan label kategori, seperti "spam" atau "non-spam."
+
+Setelah pengumpulan data, proses pembersihan dilakukan untuk menghilangkan noise, kesalahan, atau data yang tidak relevan. Selanjutnya, fitur-fitur penting diidentifikasi dan diekstraksi. Pada kasus teks, fitur biasanya adalah kata-kata atau istilah yang muncul dalam dokumen. Data kemudian dibagi menjadi dua bagian, yaitu fitur (misalnya, kata-kata dalam email) dan label kelas (misalnya, spam atau non-spam), yang akan digunakan untuk pelatihan model.
+
+### Langkah 2: Menghitung Probabilitas Prior
+
+Setelah data siap, langkah berikutnya adalah menghitung probabilitas prior untuk setiap kelas. Probabilitas prior adalah estimasi frekuensi kemunculan setiap kelas dalam data pelatihan tanpa mempertimbangkan fitur individual. Ini dihitung dengan membagi jumlah data untuk masing-masing kelas dengan total jumlah data.
+
+Sebagai contoh, jika dari 100 email, 60 adalah spam, probabilitas prior untuk spam adalah 60% atau 0.6. Probabilitas prior memberikan informasi tentang kemungkinan awal setiap kelas sebelum mempertimbangkan fitur-fitur dalam data.
+
+### Langkah 3: Menghitung Probabilitas Likelihood
+
+Langkah ini melibatkan perhitungan probabilitas likelihood, yaitu seberapa sering fitur tertentu muncul dalam data untuk setiap kelas. Probabilitas likelihood diukur dengan menghitung frekuensi kemunculan fitur dalam data yang telah dilabeli dengan kelas tertentu.
+
+Misalnya, jika kata "diskon" muncul 15 kali dalam email yang dikategorikan sebagai spam dan 5 kali dalam email non-spam, probabilitas likelihood kata "diskon" diberikan untuk setiap kelas dihitung berdasarkan frekuensi tersebut. Ini membantu menentukan seberapa relevan fitur-fitur tertentu dalam konteks masing-masing kelas.
+
+### Langkah 4: Menerapkan Teorema Bayes
+
+Teorema Bayes digunakan untuk menghitung probabilitas posterior, yaitu probabilitas bahwa suatu data termasuk dalam kelas tertentu berdasarkan fitur yang diberikan. Formula Teorema Bayes menggabungkan probabilitas prior dan probabilitas likelihood dari fitur untuk menghasilkan probabilitas posterior.
+
+### Langkah 5: Klasifikasi
+
+Setelah menghitung probabilitas posterior untuk setiap kelas, langkah terakhir adalah menentukan kategori akhir untuk data uji. Kelas dengan probabilitas posterior tertinggi dipilih sebagai hasil klasifikasi. Ini berarti bahwa berdasarkan fitur yang diberikan dan probabilitas yang dihitung, kelas dengan probabilitas posterior tertinggi adalah yang paling mungkin untuk data uji tersebut.
+
+Misalnya, jika probabilitas posterior untuk email lebih tinggi untuk kategori spam dibandingkan dengan non-spam, email tersebut diklasifikasikan sebagai spam. Dengan langkah-langkah ini, Naive Bayes menggunakan prinsip probabilitas sederhana untuk melakukan klasifikasi yang efektif pada berbagai jenis data.
+
+## Kelebihan dan Kekurangan Naive Bayes
+
+Naive Bayes adalah algoritma klasifikasi yang terkenal karena kesederhanaan dan efektivitasnya dalam berbagai aplikasi. Meskipun model ini memiliki beberapa keunggulan, seperti kemudahan implementasi dan kemampuan bekerja dengan data besar, juga terdapat kekurangan yang perlu dipertimbangkan.
+
+Naive Bayes memiliki kelebihan utama dalam menangani data dengan banyak fitur dan membuat model yang cepat serta efisien untuk pelatihan dan prediksi. Namun, kekurangan utamanya adalah asumsi bahwa fitur-fitur bersifat independen yang sering kali tidak sesuai dengan kenyataan, serta ketergantungan pada asumsi distribusi data yang bisa memengaruhi akurasi. Memahami kelebihan dan kekurangan ini membantu dalam menggunakan Naive Bayes dengan lebih efektif untuk klasifikasi. Berikut penjelasan lebih lengkapnya.
+
+| Kelebihan                                                                                                                                                 | Kekurangan                                                                                                                                                                    |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kesederhanaan dan Kemudahan Implementasi: Naive Bayes mudah dipahami dan diimplementasikan karena dasar matematisnya yang sederhana.                      | Asumsi Independensi Fitur: Model ini mengasumsikan bahwa fitur-fitur dalam data bersifat independen satu sama lain, padahal pada praktiknya fitur sering kali saling terkait. |
+| Kecepatan dalam Pelatihan dan Prediksi: Algoritma ini sangat efisien dalam hal waktu pelatihan dan prediksi, bahkan dengan dataset yang besar.            | Kinerja pada Data dengan Fitur Bergantung: Dalam kasus ketika fitur-fitur tidak independen, akurasi model bisa menurun karena model tidak menangkap interaksi antara fitur.   |
+| Kemampuan untuk Bekerja dengan Data Besar: Naive Bayes dapat menangani data dengan jumlah fitur yang besar tanpa memerlukan banyak sumber daya komputasi. | Keterbatasan pada Data Tidak Seimbang: Model ini dapat memiliki performa buruk pada data yang sangat tidak seimbang, beberapa kelas jauh lebih jarang daripada kelas lainnya. |
+| Kemampuan Menangani Data Hilang: Naive Bayes dapat menangani data yang hilang dengan baik, sering kali menggunakan estimasi berbasis frekuensi.           | Asumsi Distribusi Data: Algoritma ini mungkin tidak perform secara baik jika data tidak mengikuti distribusi yang diasumsikan, seperti distribusi Gaussian atau multinomial.  |
+
+Dengan memahami kelebihan dan kekurangan ini, pengguna dapat membuat keputusan yang lebih baik tentang waktu serta cara menggunakan Naive Bayes untuk masalah klasifikasi tertentu.
