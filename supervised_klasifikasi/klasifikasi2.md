@@ -526,28 +526,11 @@ Dengan model yang telah dilatih dan dioptimalkan, model diimplementasikan dalam 
 
 SVM memiliki berbagai kelebihan yang membuatnya populer dalam berbagai aplikasi, tetapi juga memiliki beberapa kekurangan yang perlu dipertimbangkan. Tabel berikut merangkum kelebihan dan kekurangan utama dari SVM untuk memberikan gambaran lebih jelas tentang waktu dan cara algoritma ini dapat digunakan secara efektif.
 
-| Kelebihan | Kekurangan |
-| --------- | ---------- |
-
-| Margin Maksimal: SVM mencari hyperplane yang memisahkan kelas dengan margin maksimal, yang dapat meningkatkan generalisasi dan mengurangi risiko overfitting.
-
-| Kompleksitas Komputasi: untuk dataset besar atau fitur yang sangat banyak, pelatihan SVM bisa menjadi sangat lambat dan memerlukan banyak memori.
-
-|
-| Kemampuan Menangani Data Non-Linier: dengan penggunaan kernel trick, SVM dapat mengatasi data yang tidak dapat dipisahkan secara linier dengan baik.
-
-| Pemilihan Parameter: pemilihan parameter, seperti C, gamma, dan jenis kernel dapat memengaruhi kinerja model secara signifikan dan memerlukan tuning yang hati-hati.
-
-|
-| Kinerja yang Baik dengan Data Kecil: SVM sering kali memberikan hasil yang baik pada dataset dengan jumlah data relatif kecil jika dibandingkan dengan metode lain.
-
-| Tidak Biasa Menghasilkan Probabilitas: SVM tidak secara langsung memberikan probabilitas untuk kelas yang mungkin menjadi kendala jika probabilitas klasifikasi penting dalam aplikasi tertentu.
-
-|
-| Efektif pada Dimensi Tinggi: SVM dapat bekerja dengan baik pada data berdimensi tinggi, seperti dalam masalah teks dan bioinformatika, letak banyak fitur mungkin ada.
-
-| Interpretasi Model Sulit: hasil model SVM, terutama dengan kernel non-linier, sering kali sulit untuk diinterpretasikan atau dipahami secara intuitif.
-
-|
+| Kelebihan                                                                                                                                                              | Kekurangan                                                                                                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Margin Maksimal: SVM mencari hyperplane yang memisahkan kelas dengan margin maksimal, yang dapat meningkatkan generalisasi dan mengurangi risiko overfitting.          | Kompleksitas Komputasi: untuk dataset besar atau fitur yang sangat banyak, pelatihan SVM bisa menjadi sangat lambat dan memerlukan banyak memori.                                                |
+| Kemampuan Menangani Data Non-Linier: dengan penggunaan kernel trick, SVM dapat mengatasi data yang tidak dapat dipisahkan secara linier dengan baik.                   | Pemilihan Parameter: pemilihan parameter, seperti C, gamma, dan jenis kernel dapat memengaruhi kinerja model secara signifikan dan memerlukan tuning yang hati-hati.                             |
+| Kinerja yang Baik dengan Data Kecil: SVM sering kali memberikan hasil yang baik pada dataset dengan jumlah data relatif kecil jika dibandingkan dengan metode lain.    | Tidak Biasa Menghasilkan Probabilitas: SVM tidak secara langsung memberikan probabilitas untuk kelas yang mungkin menjadi kendala jika probabilitas klasifikasi penting dalam aplikasi tertentu. |
+| Efektif pada Dimensi Tinggi: SVM dapat bekerja dengan baik pada data berdimensi tinggi, seperti dalam masalah teks dan bioinformatika, letak banyak fitur mungkin ada. | Interpretasi Model Sulit: hasil model SVM, terutama dengan kernel non-linier, sering kali sulit untuk diinterpretasikan atau dipahami secara intuitif.                                           |
 
 Dengan mempertimbangkan kelebihan dan kekurangan ini, Anda dapat menentukan bahwa SVM adalah algoritma yang tepat dalam masalah klasifikasi atau regresi yang sedang dihadapi serta cara mengoptimalkan penggunaannya untuk hasil terbaik.
