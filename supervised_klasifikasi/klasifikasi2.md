@@ -127,8 +127,8 @@ Kelas mayoritas dari tetangga terdekat inilah yang akan menjadi prediksi akhir K
 
 Sebagaimana algoritma lainnya, KNN memiliki kelebihan dan kekurangan yang perlu dipertimbangkan sebelum diimplementasikan dalam suatu proyek. Memahami kekuatan dan kelemahan KNN sangat penting untuk menentukan algoritma ini sesuai atau tidak dengan kebutuhan spesifik dari masalah yang dihadapi.
 
-| Kelebihan KNN                                                                                        | Kekurangan KNN                                                                                                                     |     |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --- |
+| Kelebihan KNN                                                                                        | Kekurangan KNN                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | Simpel dan Intuitif: mudah dipahami dan diimplementasikan tanpa banyak asumsi.                       | Komputasi Berat untuk Dataset Besar: perhitungan jarak untuk setiap prediksi membuat KNN lambat pada dataset besar.                |
 | Non-parametrik: tidak mengasumsikan distribusi data tertentu, cocok untuk berbagai jenis data.       | Sensitif terhadap Noise: data yang tidak sesuai atau fitur yang tidak relevan dapat menurunkan akurasi prediksi.                   |
 | Efektif untuk Dataset Kecil: ideal untuk dataset kecil dengan interpretasi langsung dan hasil cepat. | Memori Intensif: membutuhkan penyimpanan seluruh dataset pelatihan dalam memori, meningkatkan kebutuhan memori pada dataset besar. |
