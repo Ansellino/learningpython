@@ -69,3 +69,43 @@ Penggunaan fitur yang banyak dan tidak relevan juga dapat menyebabkan overfittin
 ![alt text](image-8.png)
 
 Misalnya, bayangkan kamu membuat model untuk memprediksi hasil ujian dengan memasukkan banyak fitur, seperti waktu tidur, waktu belajar, dan jenis makanan. Jika model terlalu kompleks dengan banyak fitur tambahan yang tidak benar-benar berhubungan dengan hasil ujian, model mungkin hanya "mempelajari" pola-pola acak dari data latih, yang tidak akan berlaku pada data baru.
+
+# Metode Deteksi Overfitting dan Underfitting
+
+Memahami serta mengatasi overfitting dan underfitting adalah kunci untuk membangun model machine learning yang efektif serta akurat. Overfitting dan underfitting masing-masing mengindikasikan masalah dengan cara model beradaptasi terhadap data serta masing-masing memerlukan pendekatan yang berbeda untuk deteksi dan perbaikan. Metode deteksi ini membantu kita mengevaluasi cara model bekerja pada data latih dan data uji serta cara model dapat disesuaikan untuk mencapai performa yang optimal.
+
+![alt text](image-9.png)
+
+## Metode Deteksi Overfitting
+
+Dalam pengembangan model machine learning, deteksi overfitting adalah langkah krusial untuk memastikan bahwa model yang dibangun tidak hanya berfungsi baik pada data latih, tetapi juga dapat menggeneralisasi dengan baik dalam data yang belum pernah dilihat sebelumnya. Untuk mendeteksi dan mengatasi masalah ini, berbagai metode dapat diterapkan. Berikut adalah di antaranya.
+
+![alt text](image-10.png)
+
+### Evaluasi Performa pada Data Latih dan Data Uji
+
+Untuk mendeteksi overfitting, Anda perlu membandingkan performa model pada data latih dan data uji. Jika model menunjukkan kinerja yang sangat baik pada data latih, tetapi performanya menurun secara signifikan dalam data uji, ini menandakan bahwa model terlalu terlatih pada data latih dan gagal menggeneralisasi pola dalam data yang belum pernah dilihat. Perbedaan besar antara akurasi pada data latih dan data uji menunjukkan bahwa model telah "mengingat" data latih dengan terlalu detail.
+
+### Learning Curve
+
+Learning curve menunjukkan proses perubahan ataupun kesalahan model seiring dengan jumlah data pelatihan. Jika model menunjukkan kesalahan pelatihan yang sangat rendah, tetapi kesalahan validasi tetap tinggi atau meningkat, ini dapat menandakan overfitting. Kurva ini membantu memvisualisasikan bahwa model terlalu kompleks dan memerlukan penyederhanaan.
+
+## Metode Deteksi Underfitting
+
+Dalam pengembangan model machine learning, deteksi overfitting adalah langkah krusial untuk memastikan bahwa model yang dibangun tidak hanya berfungsi baik pada data latih, tetapi juga dapat menggeneralisasi dengan baik pada data yang belum pernah dilihat sebelumnya. Untuk mendeteksi dan mengatasi masalah ini, berbagai metode dapat diterapkan. Berikut adalah di antaranya.
+
+![alt text](image-11.png)
+
+### Evaluasi Performa pada Data Latih dan Data Uji
+
+Sama seperti overfitting, untuk mendeteksi underfitting, perhatikan jika model menunjukkan performa yang buruk, baik pada data latih maupun data uji. Model yang terlalu sederhana akan tidak mampu menangkap pola kompleks dalam data sehingga menyebabkan kesalahan yang tinggi pada kedua set data. Ini menunjukkan bahwa model perlu diperbaiki untuk menangkap informasi yang lebih mendalam.
+
+### Learning Curve
+
+Learning curve juga berguna untuk mendeteksi underfitting. Jika kurva pembelajaran menunjukkan kesalahan tinggi pada data latih dan data uji yang tidak menurun meskipun jumlah data pelatihan meningkat, ini menandakan bahwa model mungkin terlalu sederhana untuk menangkap pola dalam data. Kurva ini membantu menentukan jika model perlu lebih kompleks.
+
+### Pemeriksaan Kompleksitas Model
+
+Tinjau kompleksitas model dengan memeriksa jenis model yang digunakan dan jumlah fitur tersedia. Model yang terlalu sederhana mungkin tidak dapat menangkap hubungan rumit dalam data. Misalnya, menggunakan regresi linear pada data dengan hubungan non-linear dapat mengakibatkan underfitting. Menyederhanakan model atau menambahkan fitur baru bisa membantu.
+
+Dengan menggunakan metode deteksi ini, Anda dapat memastikan bahwa model machine learning tidak hanya berfungsi baik pada data latih, tetapi juga dapat menggeneralisasi dengan baik dalam data yang belum pernah dilihat sebelumnya sehingga meningkatkan akurasi dan efektivitas model secara keseluruhan.
