@@ -33,3 +33,39 @@ Good fit adalah kondisi ideal ketika model machine learning mampu menangkap pola
 Bayangkan Anda mempersiapkan diri untuk ujian matematika dengan cara yang seimbang: memahami konsep-konsep dasar, mengerjakan soal latihan, dan mempelajari berbagai variasi soal tanpa terlalu menghafal angka-angka spesifik. Ketika ujian tiba, Anda bisa menjawab soal-soal dengan baik karena mengerti pola dan konsep, serta menyesuaikan jawaban dengan soal yang sedikit berbeda. Ini seperti good fit—model belajar cukup dari data latih, menangkap pola penting, dan mampu membuat prediksi akurat pada data baru tanpa terganggu oleh detail yang tidak relevan.
 
 Misalnya, jika Anda membuat model untuk memprediksi harga makanan di pasar, model good fit akan mempertimbangkan faktor-faktor penting, seperti ukuran, kualitas, dan lokasi, tanpa berlebihan dalam menghafal harga spesifik pada data latih. Saat dihadapkan pada data baru, model mampu membuat prediksi dengan tepat karena memahami pola umum yang relevan dari data tersebut.
+
+# Penyebab Overfitting dan Underfitting
+
+Ketika Anda berusaha mengembangkan model machine learning secara akurat serta efektif, memahami penyebab di balik masalah overfitting dan underfitting adalah hal yang sangat penting. Keduanya adalah tantangan umum yang dapat memengaruhi kualitas prediksi model.
+
+![alt text](image-4.png)
+
+Melalui penjelasan berikut, Anda akan menggali lebih dalam mengenai berbagai penyebab dari kedua masalah ini serta pengaruhnya pada kinerja model. Memahami penyebab-penyebab ini tentunya akan membantu Anda dalam mengidentifikasi dan memperbaiki masalah sehingga dapat membangun model yang lebih baik serta andal. Berikut adalah beberapa di antaranya.
+
+## Kompleksitas Model yang Terlalu Tinggi
+
+Overfitting sering kali terjadi ketika model machine learning memiliki terlalu banyak parameter atau fitur. Model yang terlalu kompleks mampu menangkap bahkan detail terkecil dan noise dalam data latih.
+
+![alt text](image-5.png)
+
+Misalnya, jika Anda menggunakan model yang sangat kompleks, seperti regresi polinomial dengan nilai degree tinggi untuk data yang sebenarnya hanya butuh model sederhana, seperti regresi linear, model tersebut bisa menjadi terlalu spesifik terhadap data latih. Artinya, model akan terlalu fokus pada detail-detail kecil dan kesalahan yang tidak penting. Hasilnya, meskipun model bekerja dengan baik pada data latih, ia tidak dapat memberikan prediksi yang akurat untuk data baru.
+
+## Data Latih yang Terbatas
+
+![alt text](image-6.png)
+
+Jika kompleksitas model sangat besar dibandingkan dengan jumlah ketersediaan data latih, model tersebut mungkin akan terlalu menyesuaikan diri dengan data yang ada. Ini bisa menyebabkan model menangkap noise dan detail yang tidak penting. Model yang terlalu "fit" dengan data latih mungkin tidak dapat generalisasi secara baik pada data baru yang berbeda.
+
+## Pelatihan yang Terlalu Lama
+
+![alt text](image-7.png)
+
+Pelatihan model yang terlalu lama dapat menyebabkan overfitting karena model terus-menerus menyesuaikan parameter untuk meminimalkan kesalahan pada data latih. Seiring berjalannya waktu, model dapat mulai mempelajari pola-pola spesifik yang tidak relevan dan tidak ada dalam data uji sehingga mengurangi kemampuannya untuk menggeneralisasi.
+
+## Fitur yang Tidak Relevan
+
+Penggunaan fitur yang banyak dan tidak relevan juga dapat menyebabkan overfitting. Fitur yang tidak penting dapat membuat model terlalu kompleks dan cenderung fokus pada pola-pola tidak signifikan atau acak dalam data latih.
+
+![alt text](image-8.png)
+
+Misalnya, bayangkan kamu membuat model untuk memprediksi hasil ujian dengan memasukkan banyak fitur, seperti waktu tidur, waktu belajar, dan jenis makanan. Jika model terlalu kompleks dengan banyak fitur tambahan yang tidak benar-benar berhubungan dengan hasil ujian, model mungkin hanya "mempelajari" pola-pola acak dari data latih, yang tidak akan berlaku pada data baru.
