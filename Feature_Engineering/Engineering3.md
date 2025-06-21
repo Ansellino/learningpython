@@ -184,3 +184,44 @@ Teknik-teknik seperti oversampling dan undersampling adalah solusi umum untuk me
 Eitss, walaupun Anda sudah mengetahui berbagai metode untuk penanganan kasus imbalance dataset, tetapi kami tetap menyarankan untuk melakukan pengumpulan data agar data yang Anda gunakan sepenuhnya asli (terjadi di dunia nyata) dan bukan data sintetis. Namun, jika hal tersebut tidak memungkinkan, jangan sungkan untuk melakukan sampling, ya.
 
 ![alt text](image-54.png)
+
+# SMOTE (Synthetic Minority Over-Sampling Technique)
+
+Hai, apakah Anda sudah menuntaskan materi Oversampling dan Undersampling dengan baik? Kereeenn, selanjutnya Anda akan mempelajari salah satu teknik yang biasa digunakan ketika menghadapi situasi imbalance dataset.
+
+Seperti yang Anda tahu dalam situasi imbalanced dataset, model machine learning yang Anda buat cenderung bias terhadap kelas mayoritas karena kelas tersebut memiliki lebih banyak data untuk dipelajari. Jika kita menggunakan metode random oversampling, data minoritas hanya akan diduplikasi tanpa pola sehingga berisiko membuat model overfit. Overfit adalah kondisi model menjadi terlalu menyesuaikan dengan data yang ada sehingga kinerjanya buruk pada data yang belum pernah dilihat (data test).
+
+Synthetic Minority Over-sampling Technique (SMOTE) adalah teknik oversampling yang dirancang untuk menangani masalah imbalanced dataset pada machine learning. Berbeda dengan random oversampling yang hanya menduplikasi sampel dari kelas minoritas, SMOTE menghasilkan sampel sintetis (baru) berdasarkan data yang sudah ada di kelas minoritas. Dari hal itu terciptalah variasi baru di dalam dataset dan mengurangi risiko overfitting yang mungkin terjadi jika kita hanya menduplikasi data secara acak.
+
+![alt text](image-55.png)
+
+Sebenarnya metode SMOTE juga bekerja dengan cara yang tidak terlalu rumit. Secara umum, metode ini memiliki tiga buah langkah yang harus dilakukan hingga menghasilkan data yang seimbang.
+
+Ambil Sampel dari Kelas Minoritas: setiap sampel minoritas yang ada akan memilih beberapa tetangga terdekatnya. Biasanya, tahapan ini dihitung menggunakan K-Nearest Neighbors (KNN) atau K-Means.
+Interpolasi Data: buat sampel sintetis baru dengan melakukan interpolasi antara sampel minoritas dan tetangga terdekatnya. Interpolasi dilakukan dengan mengambil titik di sepanjang garis lurus yang menghubungkan dua data minoritas.
+Tambahkan Sampel Sintetis ke Dataset: sampel baru ini ditambahkan ke dataset, sehingga jumlah data di kelas minoritas bertambah hingga proporsional dengan kelas mayoritas.
+Agar Anda lebih memahami proses yang terjadi pada teknik ini, mari kita lakukan perhitungan sederhana menggunakan teknik SMOTE. Bayangkan Anda memiliki dua titik dari kelas minoritas yaitu Titik_A = (2, 4) dan Titik_B = (4, 8). Dengan SMOTE, Anda dapat membuat titik sintetis baru di antara A dan B. Misalkan interpolasi dilakukan pada posisi 60% dari A ke B sehingga titik baru (sintetis) tersebut akan berada di nilai berikut.
+
+Titiksintetis = A + 0.6 × (B−A)
+
+                 = (2,4) + 0.6 × ((4,8) − (2,4))
+
+                 = (2,4) + 0.6 × (2,4) = (3.2, 6.4)
+
+Hasilnya, titik sintetis yang muncul berada di (3.2, 6.4). Agar lebih mudah memahaminya, perhatikan gambar berikut.
+
+![alt text](image-56.png)
+
+Cukup jelas kan perhitungan yang dilakukan? Memang sangat mudah kok. Bersamaan dengan kemudahan ini terdapat beberapa kelebihan dan kekurangan yang membayang-bayangi teknik ini.
+
+Kelebihan utama SMOTE adalah kemampuannya untuk mengurangi overfitting yang sering terjadi pada random oversampling. Dengan menciptakan data sintetis melalui interpolasi antara titik-titik minoritas, model machine learning dapat mempelajari lebih banyak pola yang relevan. Selain itu, SMOTE sangat cocok untuk data yang memiliki banyak fitur (high-dimensional data) karena interpolasi dilakukan dalam ruang fitur yang lebih kompleks. Hal tersebut dapat menciptakan sampel sintetis yang lebih representatif jika dibandingkan dengan random oversampling.
+
+Tak hanya kelebihan, SMOTE juga memiliki beberapa kekurangan yang perlu Anda ketahui. Salah satu masalah utamanya adalah risiko menciptakan sampel sintetis yang tidak realistis, terutama jika interpolasi dilakukan antara titik-titik yang berbeda secara signifikan. Hal ini dapat menyebabkan model mempelajari pola yang tidak akurat.
+
+Selain itu, SMOTE tidak dapat menangani outlier dengan baik. Jika titik data minoritas yang digunakan dalam interpolasi adalah outlier, data sintetis yang dihasilkan bisa menjadi tidak relevan.
+
+Proses interpolasi SMOTE juga memerlukan perhitungan tambahan seperti mencari data terdekat yang bisa meningkatkan waktu komputasi terutama pada dataset yang besar.
+
+Dengan berbagai macam kelebihan dan kekurangannya, teknik ini tetap menjadi salah satu yang paling populer untuk menangani permasalahan imbalance dataset. Nah, bagaimana dengan Anda? Apakah sudah puas? Bagus jika Anda belum puas. Teruslah belajar dan jangan mudah puas dengan perubahan yang sudah Anda lakukan karena akan selalu ada hal yang harus diperbaiki dan dikembangkan.
+
+Sebagai materi penutup, selanjutnya Anda akan melakukan implementasi sebagai bentuk latihan dari materi yang sudah dikuasai sampai saat ini. Tentunya, akan ada berbagai macam rintangan yang akan Anda hadapi. Namun, tenang saja karena kami akan selalu menemani setiap perjalanan Anda sampai akhir. Jadi, jika ada yang ingin ditanyakan jangan sungkan untuk menggunakan forum diskusi, ya.
